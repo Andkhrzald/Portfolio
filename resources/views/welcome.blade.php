@@ -7,6 +7,7 @@
 @include('components.skills')
 @include('components.projects')
 @include('components.experience')
+@include('components.colaborasi')
 @include('components.contact')
 
 @endsection

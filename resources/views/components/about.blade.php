@@ -6,8 +6,8 @@
         <!-- LEFT IMAGE -->
         <div class="relative">
             <img 
-                src="{{ asset('images/about/about1.jpg') }}" 
-                class="rounded-2xl w-[85%] shadow-lg translate-x-20">
+                src="{{ asset('images/profile/profile.jpeg') }}" 
+                class="rounded-2xl w-[60%] shadow-lg translate-x-50">
 
             <!-- DOT DECORATION -->
             <div class="absolute -left-6 top-10 grid grid-cols-3 gap-2 opacity-40 ">

@@ -1,15 +1,77 @@
 @import "tailwindcss";
 
-/* Pastikan Tailwind memantau file Blade dan JS Flowbite */
-@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
-@source "../../storage/framework/views/*.php";
-@source "../**/*.blade.php";
-@source "../**/*.js";
-@source "../../node_modules/flowbite/**/*.js"; 
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+/* Optional custom */
+.glow-line {
+    background: linear-gradient(to right, transparent, #6366f1, transparent);
 }
 
-/* Load Plugin Flowbite langsung di sini */
-@plugin "flowbite/plugin";
+/* ========================= */
+/* 🔥 ANIMATION HERO */
+/* ========================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* Delay (stagger animation) */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ========================= */
+/* 🔥 SMOOTH TRANSITION GLOBAL */
+/* ========================= */
+
+* {
+    scroll-behavior: smooth;
+}
+
+.perspective {
+    perspective: 1000px;
+}
+
+/* Cursor Spotlight */
+#cursor-light {
+    background: radial-gradient(
+        circle at center,
+        rgba(99,102,241,0.35),
+        transparent 300px
+    );
+    transition: background 0.05s linear;
+}
+
+@keyframes glowX {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-glowX {
+    animation: glowX 2.5s linear infinite;
+}
+
+@keyframes lineGlowY {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(50%); }
+}
+
+.animate-lineGlowY {
+    animation: lineGlowY 2s linear infinite;
+}
