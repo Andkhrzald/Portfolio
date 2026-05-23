@@ -51,7 +51,6 @@
         rgba(99,102,241,0.35),
         transparent 300px
     );
-    transition: background 0.05s linear;
 }
 
 @keyframes glowX {
@@ -74,4 +73,87 @@
 
 .animate-lineGlowY {
     animation: lineGlowY 2s linear infinite;
+}
+
+/* ========================= */
+/* SKILLS MARQUEE */
+/* ========================= */
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 35s linear infinite;
+}
+
+/* ========================= */
+/* HERO PHOTO ANIMATIONS */
+/* ========================= */
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-14px); }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float-badge {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    33% { transform: translateY(-7px) translateX(3px); }
+    66% { transform: translateY(-3px) translateX(-2px); }
+}
+
+.animate-float-badge {
+    animation: float-badge 4s ease-in-out infinite;
+}
+
+@keyframes orbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-orbit {
+    animation: orbit 20s linear infinite;
+}
+
+@keyframes orbit-reverse {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+.animate-orbit-reverse {
+    animation: orbit-reverse 25s linear infinite;
+}
+
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0px) rotate(45deg); }
+    50% { transform: translateY(-12px) rotate(45deg); }
+}
+
+.animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+    0%, 100% { opacity: 0.25; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.08); }
+}
+
+.animate-pulse-soft {
+    animation: pulse-soft 4s ease-in-out infinite;
+}
+
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-move {
+    background-size: 200% 200%;
+    animation: gradient-move 4s ease infinite;
 }

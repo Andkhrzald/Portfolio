@@ -1,23 +1,23 @@
-<section id="projects" class="py-20 bg-[#0b1220]">
+<section id="projects" class="py-16 sm:py-20 bg-[#0b1220]">
 
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
         <!-- HEADER -->
-        <div class="flex justify-between items-center mb-12">
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-10 sm:mb-12">
             <div>
-                <p class="text-indigo-400 text-sm mb-2">MY PROJECTS</p>
-                <h2 class="text-3xl font-bold">Some of my recent work</h2>
+                <p class="text-indigo-400 text-xs sm:text-sm mb-2 tracking-wider">MY PROJECTS</p>
+                <h2 class="text-2xl sm:text-3xl font-bold">Some of my recent work</h2>
             </div>
 
             <a href="#" 
-               class="border border-indigo-500/30 px-4 py-2 rounded-lg text-sm 
-                      hover:bg-indigo-500/10 transition">
+               class="self-start sm:self-auto border border-indigo-500/30 px-4 py-2 rounded-lg text-xs sm:text-sm 
+                      hover:bg-indigo-500/10 transition text-center">
                 View All Projects
             </a>
         </div>
 
         <!-- GRID -->
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
             @php
             $projects = [
@@ -50,9 +50,10 @@
                         transition duration-300">
 
                 <!-- IMAGE -->
-                <div class="relative overflow-hidden">
+                <div class="relative overflow-hidden bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
                     <img src="{{ asset('images/projects/' . $project['img']) }}" 
-                         class="w-full h-48 object-cover 
+                         onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center','h-40','sm:h-48'); this.parentElement.innerHTML='<span class=\'text-indigo-400 text-base sm:text-lg font-semibold\'>'+this.alt+'</span>'"
+                         class="w-full h-40 sm:h-48 object-cover 
                                 group-hover:scale-105 transition duration-300">
 
                     <!-- ICON BUTTON -->
@@ -68,18 +69,18 @@
                 </div>
 
                 <!-- CONTENT -->
-                <div class="p-5">
+                <div class="p-4 sm:p-5">
 
-                    <h3 class="text-lg font-semibold mb-2">
+                    <h3 class="text-base sm:text-lg font-semibold mb-2">
                         {{ $project['title'] }}
                     </h3>
 
-                    <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+                    <p class="text-xs sm:text-sm text-gray-400 mb-4 leading-relaxed">
                         {{ $project['desc'] }}
                     </p>
 
                     <!-- TECH TAG -->
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
 
                         @foreach ($project['tech'] as $tech)
 
@@ -95,7 +96,7 @@
                                 ];
                             @endphp
 
-                            <span class="text-xs px-3 py-1 rounded-full 
+                            <span class="text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full 
                                         {{ $colors[$tech] ?? 'bg-gray-500/10 text-gray-400 border border-gray-500/20' }}
                                         hover:shadow-lg transition">
                                 {{ $tech }}

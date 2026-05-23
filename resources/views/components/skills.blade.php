@@ -1,11 +1,11 @@
-<section id="skills" class="py-20 px-6 bg-[#020617] relative">
+<section id="skills" class="py-12 sm:py-16 px-4 sm:px-6 bg-[#020617] relative overflow-hidden">
 
     <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/10 via-transparent to-transparent pointer-events-none"></div>
 
     <!-- TITLE -->
-    <div class="mb-12">
-        <p class="text-indigo-400 text-sm mb-2">MY SKILLS</p>
-        <h2 class="text-3xl font-bold">Technologies I use</h2>
+    <div class="max-w-7xl mx-auto mb-8 sm:mb-10">
+        <p class="text-indigo-400 text-xs sm:text-sm mb-2 tracking-wider">MY SKILLS</p>
+        <h2 class="text-2xl sm:text-3xl font-bold">Technologies I use</h2>
     </div>
 
     @php
@@ -24,69 +24,53 @@
     <div class="relative overflow-hidden">
 
         <!-- FADE KIRI -->
-        <div class="absolute left-0 top-0 h-full w-20 
+        <div class="absolute left-0 top-0 h-full w-12 sm:w-20 
                     bg-gradient-to-r from-[#020617] to-transparent z-10"></div>
 
         <!-- FADE KANAN -->
-        <div class="absolute right-0 top-0 h-full w-20 
+        <div class="absolute right-0 top-0 h-full w-12 sm:w-20 
                     bg-gradient-to-l from-[#020617] to-transparent z-10"></div>
 
-        <!-- MARQUEE CONTENT -->
-        <div id="marquee" class="flex gap-6 w-max transition-transform">x`
+        <!-- MARQUEE CONTENT (CSS continuous scroll) -->
+        <div id="marquee" class="flex gap-3 sm:gap-4 w-max animate-marquee">
 
-            <!-- LOOP 1 -->
             @foreach ($skills as $skill)
-            <div class="min-w-[180px] group bg-[#0f172a] border border-white/5 rounded-2xl p-6 
-                        flex flex-col items-center justify-center
-                        hover:-translate-y-2 hover:scale-105
-                        hover:border-indigo-500/40
-                        hover:shadow-indigo-500/30 hover:shadow-lg
+            <div class="min-w-[100px] sm:min-w-[130px] group bg-[#0f172a] border border-white/5 rounded-xl p-3 sm:p-4 
+                        flex flex-col items-center justify-center gap-1.5 sm:gap-2
+                        hover:-translate-y-1.5 hover:scale-105
+                        hover:border-indigo-500/30
+                        hover:shadow-indigo-500/15 hover:shadow-md
                         transition duration-300 cursor-pointer">
 
-                <img 
-                    src="{{ asset('images/skills/' . $skill['img']) }}" 
-                    class="w-10 h-10 mb-4 object-contain 
-                        grayscale opacity-70
-                        group-hover:grayscale-0 group-hover:opacity-100
-                        group-hover:scale-110 
-                        group-hover:drop-shadow-[0_0_15px_rgba(99,102,241,0.9)]
-                        transition duration-300">
+                <img src="{{ asset('images/skills/' . $skill['img']) }}" 
+                     class="w-6 h-6 sm:w-8 sm:h-8 object-contain
+                            group-hover:scale-110 
+                            group-hover:drop-shadow-[0_0_12px_rgba(99,102,241,0.8)]
+                            transition duration-300">
 
-                <p class="text-sm text-gray-300 group-hover:text-white">
+                <p class="text-[11px] sm:text-xs text-gray-300 group-hover:text-white font-medium">
                     {{ $skill['name'] }}
                 </p>
 
             </div>
             @endforeach
 
-            <!-- DUPLICATE -->
+            <!-- DUPLICATE FOR SEAMLESS LOOP -->
             @foreach ($skills as $skill)
-            <div class="min-w-[180px] group relative bg-[#0f172a] border border-white/5 rounded-2xl p-6 
-                        flex flex-col items-center justify-center
-                        hover:-translate-y-2 hover:scale-105
-                        hover:border-indigo-500/40
-                        hover:shadow-indigo-500/30 hover:shadow-lg
+            <div class="min-w-[100px] sm:min-w-[130px] group bg-[#0f172a] border border-white/5 rounded-xl p-3 sm:p-4 
+                        flex flex-col items-center justify-center gap-1.5 sm:gap-2
+                        hover:-translate-y-1.5 hover:scale-105
+                        hover:border-indigo-500/30
+                        hover:shadow-indigo-500/15 hover:shadow-md
                         transition duration-300 cursor-pointer">
 
-            <div class="absolute left-1/2 -bottom-1 w-2 h-2 bg-indigo-500 rotate-45 -translate-x-1/2 
-                        px-3 py-1 text-xs rounded-md
-                        bg-indigo-500 text-white
-                        opacity-0 translate-y-2
-                        group-hover:opacity-100 group-hover:translate-y-0
-                        transition duration-300 pointer-events-none whitespace-nowrap">
+                <img src="{{ asset('images/skills/' . $skill['img']) }}" 
+                     class="w-6 h-6 sm:w-8 sm:h-8 object-contain
+                            group-hover:scale-110 
+                            group-hover:drop-shadow-[0_0_12px_rgba(99,102,241,0.8)]
+                            transition duration-300">
 
-                {{ $skill['name'] }}
-
-            </div>
-
-                <img 
-                    src="{{ asset('images/skills/' . $skill['img']) }}" 
-                    class="w-10 h-10 mb-4 object-contain 
-                           group-hover:scale-110 
-                           group-hover:drop-shadow-[0_0_15px_rgba(99,102,241,0.9)]
-                           transition">
-
-                <p class="text-sm text-gray-300 group-hover:text-white">
+                <p class="text-[11px] sm:text-xs text-gray-300 group-hover:text-white font-medium">
                     {{ $skill['name'] }}
                 </p>
 

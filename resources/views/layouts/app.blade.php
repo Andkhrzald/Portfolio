@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
-    <title>Andika Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Andika Rizaldi - Fullstack Developer specializing in Laravel, Flutter, and modern web applications.">
+    <meta name="keywords" content="Andika Rizaldi, Fullstack Developer, Laravel, Flutter, Web Developer, Portfolio">
+    <meta property="og:title" content="Andika Rizaldi - Fullstack Developer">
+    <meta property="og:description" content="Fullstack Developer specializing in Laravel, Flutter, and modern web applications.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="{{ asset('images/profile/andikha.png') }}">
+    <title>Andika Rizaldi - Fullstack Developer</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     @vite('resources/css/app.css')
 
-    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -22,135 +29,40 @@
 @include('components.footer')
 
 <script>
-window.addEventListener('load', () => {
-    const marquee = document.getElementById('marquee');
-
-    let position = 0;
-    let speed = 0;
-    let lastScroll = window.scrollY;
-    let velocity = 0;
-
-    function animate() {
-        position += speed;
-
-        marquee.style.transform = `translateX(-${position}px)`;
-
-        // reset infinite
-        if (position >= marquee.scrollWidth / 2) {
-            position = 0;
-        }
-        if (position < 0) {
-            position = marquee.scrollWidth / 2;
-        }
-
-        // friction (biar pelan lagi)
-        speed *= 0.92;
-
-        requestAnimationFrame(animate);
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('menu-btn');
+    if (btn) {
+        const menu = document.getElementById('mobile-menu');
+        const lines = btn.querySelectorAll('span');
+        let open = false;
+        btn.addEventListener('click', () => {
+            open = !open;
+            menu.style.maxHeight = open ? menu.scrollHeight + 'px' : '0px';
+            lines[0].classList.toggle('rotate-45');
+            lines[0].classList.toggle('translate-y-[6px]');
+            lines[1].classList.toggle('opacity-0');
+            lines[2].classList.toggle('-rotate-45');
+            lines[2].classList.toggle('-translate-y-[6px]');
+        });
     }
 
-    animate();
-
-    window.addEventListener('scroll', () => {
-        let currentScroll = window.scrollY;
-
-        // hitung velocity scroll
-        velocity = currentScroll - lastScroll;
-
-        // convert jadi speed
-        speed += velocity * 0.05;
-
-        // limit biar ga liar
-        speed = Math.max(Math.min(speed, 5), -5);
-
-        lastScroll = currentScroll;
-    });
+    const light = document.getElementById('cursor-light');
+    if (light) {
+        let ticking = false;
+        document.addEventListener('mousemove', (e) => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    light.style.background = `radial-gradient(circle at ${e.clientX}px ${e.clientY}px, rgba(99,102,241,0.25), transparent 300px)`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    }
 });
 </script>
 
-<!-- js navbar -->
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-    const lines = btn.querySelectorAll("span");
-
-    let open = false;
-
-    btn.addEventListener("click", () => {
-        open = !open;
-
-        // toggle menu
-        if (open) {
-            menu.style.maxHeight = menu.scrollHeight + "px";
-        } else {
-            menu.style.maxHeight = "0px";
-        }
-
-        // animasi hamburger → X
-        lines[0].classList.toggle("rotate-45");
-        lines[0].classList.toggle("translate-y-[6px]");
-
-        lines[1].classList.toggle("opacity-0");
-
-        lines[2].classList.toggle("-rotate-45");
-        lines[2].classList.toggle("-translate-y-[6px]");
-    });
-
-});
-</script>
-
-<!-- hero js-->
-
-<script>
-const img = document.getElementById('hero-img');
-
-document.addEventListener('mousemove', (e) => {
-    const x = (window.innerWidth / 2 - e.clientX) / 25;
-    const y = (window.innerHeight / 2 - e.clientY) / 25;
-
-    img.style.transform = `translate(${x}px, ${y}px)`;
-});
-</script>
-
-<script>
-const card = document.getElementById("card-3d");
-
-document.addEventListener("mousemove", (e) => {
-    const x = (window.innerWidth / 2 - e.clientX) / 25;
-    const y = (window.innerHeight / 2 - e.clientY) / 25;
-
-    card.style.transform = `
-        rotateY(${x}deg) 
-        rotateX(${y}deg)
-        scale(1.03)
-    `;
-});
-
-document.addEventListener("mouseleave", () => {
-    card.style.transform = "rotateY(0deg) rotateX(0deg)";
-});
-</script>
-
-<script>
-const light = document.getElementById("cursor-light");
-
-document.addEventListener("mousemove", (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
-
-    light.style.background = `
-        radial-gradient(
-            circle at ${x}px ${y}px,
-            rgba(99,102,241,0.25),
-            transparent 300px
-        )
-    `;
-});
-</script>
-
+@vite('resources/js/app.js')
 
 </body>
 </html>
