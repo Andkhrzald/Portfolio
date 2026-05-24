@@ -110,5 +110,15 @@
 
         </div>
 
+        {{-- VIEW FULL TEAM --}}
+        <div class="text-center mt-10 sm:mt-14">
+            <a href="{{ route('team.index') }}"
+               class="inline-flex items-center gap-2 border border-indigo-500/30 px-5 py-2.5 rounded-lg text-sm
+                      hover:bg-indigo-500/10 transition text-gray-300 hover:text-white">
+                View Full Team
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+
     </div>
 </section>

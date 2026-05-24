@@ -16,7 +16,7 @@
         <!-- RIGHT SOCIAL -->
         <div class="flex items-center gap-2 sm:gap-4 order-2 sm:order-3">
 
-            <a href="https://github.com/andikarizaldi" target="_blank" 
+            <a href="https://github.com/Andkhrzald" target="_blank" 
                class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center 
                 rounded-lg bg-white/5 border border-white/10 
                 hover:bg-indigo-500 transition">
