@@ -78,13 +78,6 @@
                                 group-hover:shadow-[0_0_25px_rgba(56,189,248,0.6)]"></div>
                             <i class="fa-brands fa-linkedin relative text-gray-300 group-hover:text-white text-sm sm:text-base"></i>
                         </a>
-                        <a href="https://instagram.com/andikarizaldi" target="_blank" class="group relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:scale-110 transition">
-                            <div class="absolute inset-0 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10
-                                shadow-[0_10px_30px_rgba(0,0,0,0.4)] 
-                                group-hover:border-pink-400/60 
-                                group-hover:shadow-[0_0_25px_rgba(236,72,153,0.6)]"></div>
-                            <i class="fa-brands fa-instagram relative text-gray-300 group-hover:text-white text-sm sm:text-base"></i>
-                        </a>
 
                         <a href="https://www.instagram.com/andkhrzal_/" target="_blank" class="group relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:scale-110 transition">
                             <div class="absolute inset-0 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10

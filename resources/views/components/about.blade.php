@@ -1,4 +1,4 @@
-<section id="about" class="relative py-20 sm:py-28 overflow-hidden bg-gradient-to-br from-[#0b1220] via-[#0b1220] to-[#020617]">
+<section id="about" class="relative py-14 sm:py-18 overflow-hidden bg-gradient-to-br from-[#0b1220] via-[#0b1220] to-[#020617]">
 
     <!-- DECORATIVE BACKGROUND -->
     <div class="absolute inset-0 -z-10">
@@ -139,10 +139,11 @@
 
                 <!-- CTA BUTTONS -->
                 <div class="flex gap-3 sm:gap-4 justify-center md:justify-start flex-wrap">
-                    <a href="#" class="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-medium
-                        bg-gradient-to-r from-indigo-500 to-purple-500 
-                        hover:opacity-90 hover:shadow-lg hover:shadow-indigo-500/30
-                        transition shadow-md shadow-indigo-500/20">
+                    <a href="{{ asset('cv/Andikha_Rizaldi_CV.pdf') }}" download
+                       class="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-medium
+                              bg-gradient-to-r from-indigo-500 to-purple-500 
+                              hover:opacity-90 hover:shadow-lg hover:shadow-indigo-500/30
+                              transition shadow-md shadow-indigo-500/20">
                         <i class="fa-solid fa-download text-xs"></i>
                         Download CV
                     </a>

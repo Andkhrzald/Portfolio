@@ -64,5 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 @vite('resources/js/app.js')
 
+@stack('scripts')
+
 </body>
 </html>

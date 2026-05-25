@@ -5,7 +5,7 @@
 
         <!-- LEFT -->
         <p class="text-gray-400 text-xs sm:text-sm order-3 sm:order-1">
-            Andika.dev
+            Andkhrzald
         </p>
 
         <!-- CENTER -->

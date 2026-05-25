@@ -8,7 +8,7 @@
         <!-- LOGO -->
         <a href="{{ route('home') }}" class="flex items-center gap-2 shrink-0">
             <span class="w-2 h-2 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/60"></span>
-            <span class="font-bold text-base sm:text-lg tracking-tight">Andika.dev</span>
+            <span class="font-bold text-base sm:text-lg tracking-tight">andkhrzal</span>
         </a>
 
         <!-- DESKTOP MENU -->
@@ -26,8 +26,8 @@
                 <a href="{{ route('home') }}#experience" class="nav-link">Experience</a>
             </li>
             <li>
-                <a href="{{ route('projects.index') }}"
-                   class="nav-link {{ request()->routeIs('projects.*') ? 'active' : '' }}">
+                <a href="{{ route('home') }}#projects"
+                   class="nav-link {{ request()->routeIs('home') ? 'scroll-link' : '' }}">
                     Projects
                 </a>
             </li>
@@ -65,8 +65,8 @@
             <a href="{{ route('home') }}#about" class="nav-link w-full text-left">About</a>
             <a href="{{ route('home') }}#skills" class="nav-link w-full text-left">Skills</a>
             <a href="{{ route('home') }}#experience" class="nav-link w-full text-left">Experience</a>
-            <a href="{{ route('projects.index') }}"
-               class="nav-link w-full text-left {{ request()->routeIs('projects.*') ? 'active' : '' }}">
+            <a href="{{ route('home') }}#projects"
+               class="nav-link w-full text-left">
                 Projects
             </a>
             <a href="{{ route('home') }}#contact" class="nav-link w-full text-left">Contact</a>

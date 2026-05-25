@@ -1,4 +1,4 @@
-<section id="experience" class="relative py-20 sm:py-28 overflow-hidden bg-gradient-to-br from-[#020617] via-[#020617] to-[#0b1220]">
+<section id="experience" class="relative py-14 sm:py-18 overflow-hidden bg-gradient-to-br from-[#020617] via-[#020617] to-[#0b1220]">
 
     <!-- DECORATIVE BACKGROUND -->
     <div class="absolute inset-0 -z-10">
