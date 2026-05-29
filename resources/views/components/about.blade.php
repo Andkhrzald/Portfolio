@@ -54,7 +54,7 @@
                     <!-- EXPERIENCE BADGE -->
                     <div class="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 z-20 animate-fade-up">
                         <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl sm:rounded-2xl px-3 sm:px-5 py-2 sm:py-3 shadow-xl shadow-indigo-500/40 flex items-center gap-2 sm:gap-3">
-                            <span class="text-xl sm:text-3xl font-bold text-white">3+</span>
+                            <span class="text-xl sm:text-3xl font-bold text-white">1+</span>
                             <div class="text-left">
                                 <p class="text-[10px] sm:text-xs text-indigo-200 leading-tight">{{ __('about.years_of') }}</p>
                                 <p class="text-[10px] sm:text-xs text-white font-semibold leading-tight">{{ __('about.experience') }}</p>
