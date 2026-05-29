@@ -45,3 +45,11 @@ Route::get('/projects/{slug}', [ProjectController::class, 'show'])->name('projec
 Route::get('/team', [TeamController::class, 'index'])->name('team.index');
 
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+
+Route::get('/lang/{locale}', function (string $locale) {
+    if (in_array($locale, ['en', 'id'])) {
+        session(['locale' => $locale]);
+        app()->setLocale($locale);
+    }
+    return redirect()->back();
+})->name('lang.switch');

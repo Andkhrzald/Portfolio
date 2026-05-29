@@ -11,15 +11,15 @@
         {{-- HEADER --}}
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-12 sm:mb-16">
             <div class="reveal visible">
-                <p class="text-indigo-400 text-xs sm:text-sm mb-2 tracking-[0.2em] font-medium">FEATURED WORK</p>
+                <p class="text-indigo-400 text-xs sm:text-sm mb-2 tracking-[0.2em] font-medium">{{ __('projects.section_label') }}</p>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                    Selected
+                    {{ __('projects.heading_start') }}
                     <span class="bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text">
-                        Projects
+                        {{ __('projects.heading_end') }}
                     </span>
                 </h2>
                 <p class="text-gray-500 text-sm mt-2 max-w-md">
-                    Crafted with Laravel, Flutter, and modern web technologies
+                    {{ __('projects.subtitle') }}
                 </p>
             </div>
 
@@ -27,7 +27,7 @@
                class="group self-start sm:self-auto inline-flex items-center gap-2
                       border border-indigo-500/25 px-5 py-2.5 rounded-full text-sm
                       hover:bg-indigo-500/10 hover:border-indigo-500/50 transition text-gray-300 hover:text-white">
-                View All Projects
+                {{ __('projects.view_all') }}
                 <span class="arrow-animate">&rarr;</span>
             </a>
         </div>
@@ -78,7 +78,7 @@
 
                     {{-- View badge --}}
                     <span class="view-project-badge">
-                        View Project &rarr;
+                        {{ __('projects.view_project') }} &rarr;
                     </span>
                 </div>
 

@@ -17,7 +17,7 @@
                 <div class="animate-fade-up delay-100 inline-block px-4 py-1 mb-4 
                     bg-indigo-500/10 border border-indigo-500/20 
                     text-indigo-400 rounded-full text-xs sm:text-sm">
-                    Hello, I'm 👋
+                    {{ __('hero.greeting') }}
                 </div>
 
                 <h1 class="animate-fade-up delay-200 text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
@@ -29,12 +29,11 @@
                 </h1>
 
                 <h2 class="animate-fade-up delay-300 text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-white">
-                    Fullstack Developer
+                    {{ __('hero.title') }}
                 </h2>
 
                 <p class="animate-fade-up delay-400 text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 text-sm sm:text-base">
-                    I build modern, responsive, and scalable web applications 
-                    with clean code and great user experience.
+                    {{ __('hero.description') }}
                 </p>
 
                 <div class="flex gap-3 sm:gap-4 animate-fade-up delay-500 justify-center md:justify-start flex-wrap">
@@ -44,7 +43,7 @@
                        hover:opacity-90
                        shadow-lg shadow-indigo-500/30
                        transition">
-                       View My Work →
+                       {{ __('hero.view_work') }} →
                     </a>
 
                     <a href="#contact" 
@@ -52,14 +51,14 @@
                        border border-indigo-400/30 
                        text-white
                        hover:bg-indigo-500/10 transition">
-                       Contact Me ✉
+                       {{ __('hero.contact_me') }} ✉
                     </a>
                 </div>
 
                 <!-- SOCIAL -->
                 <div class="mt-8 sm:mt-10 animate-fade-up delay-500">
                     <p class="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 tracking-wide">
-                        Follow me on
+                        {{ __('hero.follow_me') }}
                     </p>
 
                     <div class="flex gap-4 sm:gap-5 justify-center md:justify-start">
@@ -171,7 +170,7 @@
                         bg-[#0f172a]/90 backdrop-blur-xl border border-emerald-500/30 rounded-full pl-2 pr-3 md:pr-4 py-1
                         shadow-lg shadow-emerald-500/10 flex items-center gap-2 whitespace-nowrap">
                         <span class="w-1.5 h-1.5 md:w-2 md:h-2 bg-emerald-400 rounded-full animate-ping opacity-75"></span>
-                        <span class="text-[10px] md:text-xs text-emerald-300 font-medium">Available</span>
+                        <span class="text-[10px] md:text-xs text-emerald-300 font-medium">{{ __('hero.available') }}</span>
                     </div>
 
                 </div>

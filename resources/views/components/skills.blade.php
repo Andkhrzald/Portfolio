@@ -4,8 +4,8 @@
 
     <!-- TITLE -->
     <div class="max-w-7xl mx-auto mb-8 sm:mb-10">
-        <p class="text-indigo-400 text-xs sm:text-sm mb-2 tracking-wider">MY SKILLS</p>
-        <h2 class="text-2xl sm:text-3xl font-bold">Technologies I use</h2>
+        <p class="text-indigo-400 text-xs sm:text-sm mb-2 tracking-wider">{{ __('skills.section_label') }}</p>
+        <h2 class="text-2xl sm:text-3xl font-bold">{{ __('skills.heading') }}</h2>
     </div>
 
     @php

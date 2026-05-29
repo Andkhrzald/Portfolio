@@ -22,11 +22,11 @@
             <div class="flex flex-wrap items-center gap-3 mb-3 reveal visible">
                 @if (count($project['collaborators']) > 0)
                 <span class="text-[11px] text-indigo-300 bg-indigo-500/15 border border-indigo-500/25 px-3 py-1 rounded-full backdrop-blur-sm">
-                    <i class="fa-solid fa-users mr-1"></i> Team Project
+                    <i class="fa-solid fa-users mr-1"></i> {{ __('projects_show.team_badge') }}
                 </span>
                 @else
                 <span class="text-[11px] text-gray-400 bg-gray-500/15 border border-gray-500/25 px-3 py-1 rounded-full backdrop-blur-sm">
-                    <i class="fa-solid fa-user mr-1"></i> Solo Project
+                    <i class="fa-solid fa-user mr-1"></i> {{ __('projects_show.solo_badge') }}
                 </span>
                 @endif
                 <span class="text-[11px] text-gray-400 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/5">
@@ -52,7 +52,7 @@
             <a href="{{ route('projects.index') }}"
                class="inline-flex items-center gap-2 text-gray-500 hover:text-white text-sm transition group bg-[#0B0F1A]/80 backdrop-blur-sm px-4 py-2 rounded-full border border-white/5">
                 <span class="group-hover:-translate-x-1 transition">&larr;</span>
-                Back to Projects
+                {{ __('projects_show.back') }}
             </a>
         </div>
 
@@ -63,14 +63,14 @@
                class="inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600
                       px-5 py-2.5 rounded-full text-sm font-medium
                       transition shadow-lg shadow-indigo-500/25">
-                <i class="fa-solid fa-rocket"></i> Live Demo
+                <i class="fa-solid fa-rocket"></i> {{ __('projects_show.live_demo') }}
             </a>
             @endif
             @if ($project['repo_url'])
             <a href="{{ $project['repo_url'] }}" target="_blank"
                class="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.12]
                       border border-white/10 px-5 py-2.5 rounded-full text-sm font-medium transition">
-                <i class="fa-brands fa-github"></i> View on GitHub
+                <i class="fa-brands fa-github"></i> {{ __('projects_show.view_github') }}
             </a>
             @endif
         </div>
@@ -91,7 +91,7 @@
                 <span class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
                     <i class="fa-solid fa-list-check text-indigo-400 text-sm"></i>
                 </span>
-                Key Features
+                {{ __('projects_show.key_features') }}
             </h2>
 
             <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
@@ -115,7 +115,7 @@
                 <span class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
                     <i class="fa-solid fa-cubes text-indigo-400 text-sm"></i>
                 </span>
-                Tech Stack
+                {{ __('projects_show.tech_stack') }}
             </h2>
 
             <div class="flex flex-wrap gap-3">
@@ -157,7 +157,7 @@
                 <span class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
                     <i class="fa-solid fa-handshake text-indigo-400 text-sm"></i>
                 </span>
-                Collaborators
+                {{ __('projects_show.collaborators') }}
             </h2>
 
             <div class="flex flex-wrap gap-4">
@@ -188,21 +188,21 @@
                     <span class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
                         <i class="fa-solid fa-circle-info text-indigo-400 text-sm"></i>
                     </span>
-                    Project Info
+                    {{ __('projects_show.project_info') }}
                 </h2>
                 <div class="grid sm:grid-cols-3 gap-6">
                     <div>
-                        <p class="text-gray-500 text-xs mb-1">Role</p>
+                        <p class="text-gray-500 text-xs mb-1">{{ __('projects_show.role') }}</p>
                         <p class="text-white text-sm font-medium">{{ $project['role'] }}</p>
                     </div>
                     <div>
-                        <p class="text-gray-500 text-xs mb-1">Timeline</p>
+                        <p class="text-gray-500 text-xs mb-1">{{ __('projects_show.timeline') }}</p>
                         <p class="text-white text-sm font-medium">{{ $project['timeline'] }}</p>
                     </div>
                     <div>
-                        <p class="text-gray-500 text-xs mb-1">Type</p>
+                        <p class="text-gray-500 text-xs mb-1">{{ __('projects_show.type') }}</p>
                         <p class="text-white text-sm font-medium">
-                            {{ count($project['collaborators']) > 0 ? 'Team Collaboration' : 'Solo Project' }}
+                            {{ count($project['collaborators']) > 0 ? __('projects_show.team_type') : __('projects_show.solo_type') }}
                         </p>
                     </div>
                 </div>
@@ -215,8 +215,8 @@
         {{-- RELATED PROJECTS --}}
         @if (count($related) > 0)
         <div class="mb-16 reveal">
-            <h2 class="text-xl sm:text-2xl font-semibold text-white mb-2">Continue Exploring</h2>
-            <p class="text-gray-500 text-sm mb-6">More projects you might be interested in</p>
+            <h2 class="text-xl sm:text-2xl font-semibold text-white mb-2">{{ __('projects_show.continue_exploring') }}</h2>
+            <p class="text-gray-500 text-sm mb-6">{{ __('projects_show.related_subtitle') }}</p>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 @foreach ($related as $rel)

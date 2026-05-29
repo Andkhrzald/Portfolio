@@ -12,15 +12,15 @@
         <div class="text-center mb-16 sm:mb-20">
             <div class="flex items-center justify-center gap-4 mb-4">
                 <span class="w-10 h-[2px] bg-gradient-to-r from-transparent via-indigo-400 to-transparent"></span>
-                <p class="text-indigo-400 text-xs sm:text-sm tracking-[0.25em] font-medium">MY JOURNEY</p>
+                <p class="text-indigo-400 text-xs sm:text-sm tracking-[0.25em] font-medium">{{ __('experience.section_label') }}</p>
                 <span class="w-10 h-[2px] bg-gradient-to-r from-transparent via-indigo-400 to-transparent"></span>
             </div>
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                Experience & 
-                <span class="bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text">Education</span>
+                {{ __('experience.heading_start') }}
+                <span class="bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text">{{ __('experience.heading_end') }}</span>
             </h2>
             <p class="text-gray-500 text-sm sm:text-base mt-3 max-w-xl mx-auto">
-                A timeline of my professional journey, academic background, and key projects.
+                {{ __('experience.subtitle') }}
             </p>
         </div>
 
@@ -45,7 +45,7 @@
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/30">
                         <i class="fa-solid fa-briefcase text-white text-sm"></i>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white">Work Experience</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white">{{ __('experience.work_section') }}</h3>
                     <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent ml-3"></div>
                 </div>
 
@@ -62,7 +62,7 @@
                         <!-- Year Badge (Mobile) -->
                         <div class="md:hidden flex items-center gap-2 mb-2">
                             <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">Feb 2026 - Present</span>
-                            <span class="text-[10px] text-gray-500">Internship</span>
+                            <span class="text-[10px] text-gray-500">{{ __('experience.internship') }}</span>
                         </div>
                         <!-- Card -->
                         <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] 
@@ -72,19 +72,19 @@
                             <div class="flex items-start justify-between mb-3">
                                 <div>
                                     <h4 class="text-base sm:text-lg font-semibold text-white">Astra Credit Companies</h4>
-                                    <p class="text-indigo-300 text-xs sm:text-sm font-medium">Administrator - Internship</p>
+                                    <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.astra.role') }}</p>
                                 </div>
                                 <span class="hidden md:inline-flex text-[11px] font-medium text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 whitespace-nowrap">Feb 2026 - Present</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">Jl. TB Simatupang, Jakarta Selatan</p>
+                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.astra.address') }}</p>
                             <ul class="space-y-1.5 mt-3">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/60 mt-1.5 shrink-0"></span>
-                                    Sortir data approval &amp; rejected nasabah
+                                    {{ __('experience.astra.task1') }}
                                 </li>
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/60 mt-1.5 shrink-0"></span>
-                                    Klasifikasi data bulanan pembayaran, pendebitan &amp; cicilan kendaraan
+                                    {{ __('experience.astra.task2') }}
                                 </li>
                             </ul>
                         </div>
@@ -98,7 +98,7 @@
                             transition duration-300 z-10"></div>
                         <div class="md:hidden flex items-center gap-2 mb-2">
                             <span class="text-[11px] font-semibold text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/20">May 2024 - Sep 2024</span>
-                            <span class="text-[10px] text-gray-500">Contract</span>
+                            <span class="text-[10px] text-gray-500">{{ __('experience.contract') }}</span>
                         </div>
                         <!-- Card (alternating: left on desktop) -->
                         <div class="md:w-[calc(50%-40px)] md:mr-[calc(50%+40px)] 
@@ -108,23 +108,23 @@
                             <div class="flex items-start justify-between mb-3">
                                 <div>
                                     <h4 class="text-base sm:text-lg font-semibold text-white">PT Gemilang Arkade Indonesia</h4>
-                                    <p class="text-indigo-300 text-xs sm:text-sm font-medium">Staff Operational</p>
+                                    <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.gemilang.role') }}</p>
                                 </div>
                                 <span class="hidden md:inline-flex text-[11px] font-medium text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-full border border-indigo-500/20 whitespace-nowrap">May - Sep 2024</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">Jl. Kapten Tendean, Jakarta</p>
+                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.gemilang.address') }}</p>
                             <ul class="space-y-1.5 mt-3">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/60 mt-1.5 shrink-0"></span>
-                                    Mengelola surat loading barang masuk &amp; keluar gedung
+                                    {{ __('experience.gemilang.task1') }}
                                 </li>
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/60 mt-1.5 shrink-0"></span>
-                                    Mempersiapkan keperluan event corporate, wedding &amp; planning
+                                    {{ __('experience.gemilang.task2') }}
                                 </li>
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/60 mt-1.5 shrink-0"></span>
-                                    Cek stock opname barang &amp; koordinasi hiring part-time
+                                    {{ __('experience.gemilang.task3') }}
                                 </li>
                             </ul>
                         </div>
@@ -138,7 +138,7 @@
                             transition duration-300 z-10"></div>
                         <div class="md:hidden flex items-center gap-2 mb-2">
                             <span class="text-[11px] font-semibold text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/20">Jan 2023 - Mar 2023</span>
-                            <span class="text-[10px] text-gray-500">Internship</span>
+                            <span class="text-[10px] text-gray-500">{{ __('experience.internship') }}</span>
                         </div>
                         <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] 
                             bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
@@ -147,23 +147,23 @@
                             <div class="flex items-start justify-between mb-3">
                                 <div>
                                     <h4 class="text-base sm:text-lg font-semibold text-white">Walikota Administrasi Jakarta Pusat</h4>
-                                    <p class="text-indigo-300 text-xs sm:text-sm font-medium">Divisi Kesbangpol - Internship</p>
+                                    <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.walikota.role') }}</p>
                                 </div>
                                 <span class="hidden md:inline-flex text-[11px] font-medium text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-full border border-purple-500/20 whitespace-nowrap">Jan - Mar 2023</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">Jl. Tanah Abang I, Jakarta Pusat</p>
+                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.walikota.address') }}</p>
                             <ul class="space-y-1.5 mt-3">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-purple-400/60 mt-1.5 shrink-0"></span>
-                                    Membantu menyusun surat keluar &amp; masuk antar divisi
+                                    {{ __('experience.walikota.task1') }}
                                 </li>
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-purple-400/60 mt-1.5 shrink-0"></span>
-                                    Merekap administrasi pencatatan hasil demonstrasi
+                                    {{ __('experience.walikota.task2') }}
                                 </li>
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-purple-400/60 mt-1.5 shrink-0"></span>
-                                    Mengklasifikasikan arsip sesuai kategori (tahun, jenis, divisi)
+                                    {{ __('experience.walikota.task3') }}
                                 </li>
                             </ul>
                         </div>
@@ -181,7 +181,7 @@
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center shadow-lg shadow-sky-500/30">
                         <i class="fa-solid fa-graduation-cap text-white text-sm"></i>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white">Education</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white">{{ __('experience.education_section') }}</h3>
                     <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent ml-3"></div>
                 </div>
 
@@ -203,19 +203,19 @@
                             <div class="flex items-start justify-between mb-3">
                                 <div>
                                     <h4 class="text-base sm:text-lg font-semibold text-white">Universitas Bina Sarana Informatika</h4>
-                                    <p class="text-sky-300 text-xs sm:text-sm font-medium">S1 Teknik Informatika</p>
+                                    <p class="text-sky-300 text-xs sm:text-sm font-medium">{{ __('experience.univ.major') }}</p>
                                 </div>
                                 <span class="hidden md:inline-flex text-[11px] font-medium text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-full border border-sky-500/20 whitespace-nowrap">2024 - 2028</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">Jl. Kemanggisan Utama Raya, Slipi - Jakarta Barat</p>
+                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.univ.address') }}</p>
                             <ul class="space-y-1.5 mt-3">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-sky-400/60 mt-1.5 shrink-0"></span>
-                                    Mengembangkan skill web development, flowchart, &amp; Python
+                                    {{ __('experience.univ.task1') }}
                                 </li>
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-sky-400/60 mt-1.5 shrink-0"></span>
-                                    Aktif dalam proyek aplikasi E-Commerce (ElvoApp)
+                                    {{ __('experience.univ.task2') }}
                                 </li>
                             </ul>
                         </div>
@@ -237,19 +237,19 @@
                             <div class="flex items-start justify-between mb-3">
                                 <div>
                                     <h4 class="text-base sm:text-lg font-semibold text-white">SMK Muhammadiyah 2 Jakarta</h4>
-                                    <p class="text-teal-300 text-xs sm:text-sm font-medium">OTKP - Otomatisasi Tata Kelola Perkantoran</p>
+                                    <p class="text-teal-300 text-xs sm:text-sm font-medium">{{ __('experience.smk.major') }}</p>
                                 </div>
                                 <span class="hidden md:inline-flex text-[11px] font-medium text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/20 whitespace-nowrap">2020 - 2023</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">Jl. K.H. Mas Mansyur, Jakarta Pusat</p>
+                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.smk.address') }}</p>
                             <ul class="space-y-1.5 mt-3">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-teal-400/60 mt-1.5 shrink-0"></span>
-                                    Kearsipan dokumen, surat menyurat, &amp; administrasi perkantoran
+                                    {{ __('experience.smk.task1') }}
                                 </li>
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-teal-400/60 mt-1.5 shrink-0"></span>
-                                    Sertifikasi Kompetensi Tenaga Perkantoran Umum - BNSP
+                                    {{ __('experience.smk.task2') }}
                                 </li>
                             </ul>
                         </div>
@@ -267,7 +267,7 @@
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-500/30">
                         <i class="fa-solid fa-code text-white text-sm"></i>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white">Featured Projects</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white">{{ __('experience.featured_section') }}</h3>
                     <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent ml-3"></div>
                 </div>
 
@@ -283,12 +283,11 @@
                             </div>
                             <div>
                                 <h4 class="text-sm sm:text-base font-semibold text-white">ELVOAPP</h4>
-                                <p class="text-[11px] text-gray-500">E-Commerce Mobile App</p>
+                                <p class="text-[11px] text-gray-500">{{ __('experience.elvoapp.subtitle') }}</p>
                             </div>
                         </div>
                         <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-3">
-                            Aplikasi E-Commerce fashion berbasis Flutter dengan desain UI/UX di Figma, 
-                            terinspirasi dari Zara, Zalora, dan Shopee.
+                            {{ __('experience.elvoapp.desc') }}
                         </p>
                         <div class="flex flex-wrap gap-1.5 mb-3">
                             <span class="text-[10px] px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/20">Flutter</span>
@@ -296,18 +295,18 @@
                             <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">UI/UX</span>
                         </div>
                         <ul class="space-y-1 text-gray-400 text-xs sm:text-sm">
-                            <li class="flex items-start gap-2">
-                                <span class="w-1 h-1 rounded-full bg-sky-400/60 mt-1.5 shrink-0"></span>
-                                Login &amp; Register Customer
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="w-1 h-1 rounded-full bg-sky-400/60 mt-1.5 shrink-0"></span>
-                                Dashboard utama dengan katalog produk
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="w-1 h-1 rounded-full bg-sky-400/60 mt-1.5 shrink-0"></span>
-                                Prototype interaktif Figma sebelum coding
-                            </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1 h-1 rounded-full bg-sky-400/60 mt-1.5 shrink-0"></span>
+                                    {{ __('experience.elvoapp.feature1') }}
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1 h-1 rounded-full bg-sky-400/60 mt-1.5 shrink-0"></span>
+                                    {{ __('experience.elvoapp.feature2') }}
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1 h-1 rounded-full bg-sky-400/60 mt-1.5 shrink-0"></span>
+                                    {{ __('experience.elvoapp.feature3') }}
+                                </li>
                         </ul>
                     </div>
 
@@ -321,12 +320,11 @@
                             </div>
                             <div>
                                 <h4 class="text-sm sm:text-base font-semibold text-white">ELVOAPP_V2</h4>
-                                <p class="text-[11px] text-gray-500">Dashboard Admin Website</p>
+                                <p class="text-[11px] text-gray-500">{{ __('experience.elvoapp_v2.subtitle') }}</p>
                             </div>
                         </div>
                         <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-3">
-                            Platform E-Commerce fashion berbasis web dengan Laravel, Vite, dan TailwindCSS v4, 
-                            sistem inventaris &amp; tracking pesanan real-time.
+                            {{ __('experience.elvoapp_v2.desc') }}
                         </p>
                         <div class="flex flex-wrap gap-1.5 mb-3">
                             <span class="text-[10px] px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-300 border border-orange-500/20">Laravel</span>
@@ -335,18 +333,18 @@
                             <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">ApexCharts</span>
                         </div>
                         <ul class="space-y-1 text-gray-400 text-xs sm:text-sm">
-                            <li class="flex items-start gap-2">
-                                <span class="w-1 h-1 rounded-full bg-orange-400/60 mt-1.5 shrink-0"></span>
-                                Sistem Auth &amp; Manajemen Pengguna
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="w-1 h-1 rounded-full bg-orange-400/60 mt-1.5 shrink-0"></span>
-                                CRUD Produk, Checkout &amp; Tracking Pesanan
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="w-1 h-1 rounded-full bg-orange-400/60 mt-1.5 shrink-0"></span>
-                                Visualisasi data penjualan dengan ApexCharts
-                            </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1 h-1 rounded-full bg-orange-400/60 mt-1.5 shrink-0"></span>
+                                    {{ __('experience.elvoapp_v2.feature1') }}
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1 h-1 rounded-full bg-orange-400/60 mt-1.5 shrink-0"></span>
+                                    {{ __('experience.elvoapp_v2.feature2') }}
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1 h-1 rounded-full bg-orange-400/60 mt-1.5 shrink-0"></span>
+                                    {{ __('experience.elvoapp_v2.feature3') }}
+                                </li>
                         </ul>
                     </div>
 

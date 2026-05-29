@@ -16,16 +16,16 @@
         {{-- HERO HEADER --}}
         <div class="text-center mb-12 sm:mb-16 reveal visible">
             <p class="text-indigo-400 text-xs sm:text-sm tracking-[0.2em] font-medium mb-3">
-                PORTFOLIO
+                {{ __('projects_index.section_label') }}
             </p>
             <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-                All
+                {{ __('projects_index.heading_start') }}
                 <span class="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
-                    Projects
+                    {{ __('projects_index.heading_end') }}
                 </span>
             </h1>
             <p class="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
-                Every project tells a story. Here are mine — from solo experiments to team collaborations.
+                {{ __('projects_index.subtitle') }}
             </p>
             <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto mt-6"></div>
         </div>
@@ -35,7 +35,7 @@
             <button data-filter="all"
                 class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300
                        bg-indigo-500 text-white shadow-lg shadow-indigo-500/25">
-                All
+                {{ __('projects_index.filter_all') }}
             </button>
             @foreach ($allTech as $tech)
             <button data-filter="{{ Str::slug($tech) }}"
@@ -49,7 +49,7 @@
 
         {{-- PROJECTS COUNT --}}
         <p class="text-center text-gray-600 text-xs sm:text-sm mb-6 reveal reveal-delay-2">
-            <span class="text-indigo-400 font-medium">{{ count($projects) }}</span> projects found
+            <span class="text-indigo-400 font-medium">{{ count($projects) }}</span> {{ __('projects_index.found') }}
         </p>
 
         {{-- GRID --}}
@@ -76,7 +76,7 @@
                     </div>
 
                     <span class="view-project-badge">
-                        Details &rarr;
+                        {{ __('projects_index.details') }} &rarr;
                     </span>
                 </div>
 
@@ -84,11 +84,11 @@
                     <div class="flex items-center gap-2 mb-2">
                         @if (count($project['collaborators']) > 0)
                         <span class="text-[10px] text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 rounded-full">
-                            <i class="fa-solid fa-users mr-1"></i>Team
+                            <i class="fa-solid fa-users mr-1"></i>{{ __('projects_index.team') }}
                         </span>
                         @else
                         <span class="text-[10px] text-gray-500 bg-gray-500/10 border border-gray-500/20 px-2.5 py-0.5 rounded-full">
-                            <i class="fa-solid fa-user mr-1"></i>Solo
+                            <i class="fa-solid fa-user mr-1"></i>{{ __('projects_index.solo') }}
                         </span>
                         @endif
                     </div>
@@ -134,7 +134,7 @@
             <a href="{{ route('home') }}"
                class="inline-flex items-center gap-2 text-gray-500 hover:text-white text-sm transition group">
                 <span class="group-hover:-translate-x-1 transition">&larr;</span>
-                Back to Home
+                {{ __('projects_index.back_home') }}
             </a>
         </div>
 

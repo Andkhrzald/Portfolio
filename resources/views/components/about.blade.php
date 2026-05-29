@@ -11,7 +11,7 @@
         <!-- SECTION LABEL -->
         <div class="flex items-center gap-4 mb-3 justify-center md:justify-start">
             <span class="w-8 h-[2px] bg-indigo-400"></span>
-            <p class="text-indigo-400 text-xs sm:text-sm tracking-[0.2em] font-medium">ABOUT ME</p>
+            <p class="text-indigo-400 text-xs sm:text-sm tracking-[0.2em] font-medium">{{ __('about.section_label') }}</p>
             <span class="w-8 h-[2px] bg-indigo-400"></span>
         </div>
 
@@ -56,8 +56,8 @@
                         <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl sm:rounded-2xl px-3 sm:px-5 py-2 sm:py-3 shadow-xl shadow-indigo-500/40 flex items-center gap-2 sm:gap-3">
                             <span class="text-xl sm:text-3xl font-bold text-white">3+</span>
                             <div class="text-left">
-                                <p class="text-[10px] sm:text-xs text-indigo-200 leading-tight">Years of</p>
-                                <p class="text-[10px] sm:text-xs text-white font-semibold leading-tight">Experience</p>
+                                <p class="text-[10px] sm:text-xs text-indigo-200 leading-tight">{{ __('about.years_of') }}</p>
+                                <p class="text-[10px] sm:text-xs text-white font-semibold leading-tight">{{ __('about.experience') }}</p>
                             </div>
                         </div>
                     </div>
@@ -71,45 +71,34 @@
 
                 <!-- HEADLINE -->
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5 leading-tight">
-                    Turning ideas into 
-                    <span class="bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text">elegant code</span>
+                    {{ __('about.heading_start') }}
+                    <span class="bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text">{{ __('about.heading_end') }}</span>
                 </h2>
 
                 <!-- BIO -->
                 <div class="space-y-4 text-gray-400 text-sm sm:text-base leading-relaxed mb-8">
-                    <p>
-                        I'm a Fullstack Developer with 3+ years of experience crafting 
-                        modern web applications and cross-platform mobile solutions. 
-                        My expertise spans Laravel, Flutter, and cutting-edge frontend technologies.
-                    </p>
-                    <p>
-                        I specialize in building clean, scalable architecture 
-                        that balances performance with maintainability. Every project 
-                        I work on is driven by user experience and long-term reliability.
-                    </p>
-                    <p>
-                        Outside coding, I explore UI/UX trends, contribute to open-source, 
-                        and continuously push the boundaries of what technology can deliver.
-                    </p>
+                    <p>{{ __('about.bio_1') }}</p>
+                    <p>{{ __('about.bio_2') }}</p>
+                    <p>{{ __('about.bio_3') }}</p>
                 </div>
 
                 <!-- STATS CARDS -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
                     <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 sm:p-4 hover:bg-white/[0.06] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5 transition duration-300">
                         <p class="text-xl sm:text-2xl font-bold text-white">3+</p>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">Years Exp</p>
+                        <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">{{ __('about.stat_years') }}</p>
                     </div>
                     <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 sm:p-4 hover:bg-white/[0.06] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5 transition duration-300">
                         <p class="text-xl sm:text-2xl font-bold text-white">20+</p>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">Projects</p>
+                        <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">{{ __('about.stat_projects') }}</p>
                     </div>
                     <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 sm:p-4 hover:bg-white/[0.06] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5 transition duration-300">
                         <p class="text-xl sm:text-2xl font-bold text-white">15+</p>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">Clients</p>
+                        <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">{{ __('about.stat_clients') }}</p>
                     </div>
                     <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 sm:p-4 hover:bg-white/[0.06] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5 transition duration-300">
                         <p class="text-xl sm:text-2xl font-bold text-white">7+</p>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">Technologies</p>
+                        <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">{{ __('about.stat_tech') }}</p>
                     </div>
                 </div>
 
@@ -145,13 +134,13 @@
                               hover:opacity-90 hover:shadow-lg hover:shadow-indigo-500/30
                               transition shadow-md shadow-indigo-500/20">
                         <i class="fa-solid fa-download text-xs"></i>
-                        Download CV
+                        {{ __('about.download_cv') }}
                     </a>
                     <a href="#contact" class="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-medium
                         border border-indigo-400/30 text-white
                         hover:bg-indigo-500/10 hover:border-indigo-400/60
                         transition">
-                        Let's Talk
+                        {{ __('about.lets_talk') }}
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>

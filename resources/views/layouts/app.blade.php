@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Andika Rizaldi - Fullstack Developer specializing in Laravel, Flutter, and modern web applications.">
+    <meta name="description" content="{{ app()->getLocale() === 'id' ? 'Portofolio Andika Rizaldi - Fullstack Developer spesialisasi Laravel, Flutter, dan aplikasi web modern.' : 'Portfolio of Andika Rizaldi - Fullstack Developer specializing in Laravel, Flutter, and modern web applications.' }}">
     <meta name="keywords" content="Andika Rizaldi, Fullstack Developer, Laravel, Flutter, Web Developer, Portfolio">
     <meta property="og:title" content="Andika Rizaldi - Fullstack Developer">
-    <meta property="og:description" content="Fullstack Developer specializing in Laravel, Flutter, and modern web applications.">
+    <meta property="og:description" content="{{ app()->getLocale() === 'id' ? 'Fullstack Developer spesialisasi Laravel, Flutter, dan aplikasi web modern.' : 'Fullstack Developer specializing in Laravel, Flutter, and modern web applications.' }}">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="{{ asset('images/profile/andikha.png') }}">
     <title>Andika Rizaldi - Fullstack Developer</title>

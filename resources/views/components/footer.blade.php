@@ -10,7 +10,7 @@
 
         <!-- CENTER -->
         <p class="text-gray-500 text-[11px] sm:text-sm text-center order-1 sm:order-2">
-            &copy; 2026 Andika Rizaldi. All rights reserved.
+            {{ __('footer.copyright') }}
         </p>
 
         <!-- RIGHT SOCIAL -->

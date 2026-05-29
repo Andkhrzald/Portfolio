@@ -16,13 +16,12 @@
 
         {{-- HEADER --}}
         <div class="text-center mb-12 sm:mb-16">
-            <p class="text-indigo-400 text-xs sm:text-sm tracking-widest mb-2">MY TEAM</p>
+            <p class="text-indigo-400 text-xs sm:text-sm tracking-widest mb-2">{{ __('team.section_label') }}</p>
             <h1 class="text-3xl sm:text-5xl font-bold text-white mb-3">
-                People I <span class="text-indigo-400">Collaborate</span> With
+                {{ __('team.heading_start') }} <span class="text-indigo-400">{{ __('team.heading_end') }}</span> {{ __('team.heading_with') }}
             </h1>
             <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
-                Amazing developers and creators I've worked with on various projects.
-                Data fetched live from GitHub.
+                {{ __('team.subtitle') }}
             </p>
         </div>
 
@@ -95,7 +94,7 @@
         {{-- BACK --}}
         <div class="text-center mt-12">
             <a href="{{ route('home') }}#colaborasi" class="text-gray-400 hover:text-white text-sm transition">
-                &larr; Back to Team Section
+                &larr; {{ __('team.back') }}
             </a>
         </div>
 

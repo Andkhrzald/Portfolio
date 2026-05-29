@@ -16,32 +16,46 @@
             <li>
                 <a href="{{ route('home') }}#about"
                    class="nav-link {{ request()->routeIs('home') ? 'scroll-link' : '' }}">
-                    About
+                    {{ __('nav.about') }}
                 </a>
             </li>
             <li>
-                <a href="{{ route('home') }}#skills" class="nav-link">Skills</a>
+                <a href="{{ route('home') }}#skills" class="nav-link">{{ __('nav.skills') }}</a>
             </li>
             <li>
-                <a href="{{ route('home') }}#experience" class="nav-link">Experience</a>
+                <a href="{{ route('home') }}#experience" class="nav-link">{{ __('nav.experience') }}</a>
             </li>
             <li>
                 <a href="{{ route('home') }}#projects"
                    class="nav-link {{ request()->routeIs('home') ? 'scroll-link' : '' }}">
-                    Projects
+                    {{ __('nav.projects') }}
                 </a>
             </li>
             <li>
-                <a href="{{ route('home') }}#contact" class="nav-link">Contact</a>
+                <a href="{{ route('home') }}#contact" class="nav-link">{{ __('nav.contact') }}</a>
             </li>
         </ul>
+
+        <!-- LANGUAGE SWITCHER DESKTOP -->
+        <div class="hidden md:flex items-center gap-0.5 bg-white/5 border border-white/10 rounded-full p-0.5 shrink-0">
+            <a href="{{ route('lang.switch', 'en') }}"
+               class="px-2.5 py-1 rounded-full text-xs font-medium transition
+                      {{ app()->getLocale() === 'en' ? 'bg-indigo-500 text-white shadow-sm' : 'text-gray-400 hover:text-white' }}">
+                EN
+            </a>
+            <a href="{{ route('lang.switch', 'id') }}"
+               class="px-2.5 py-1 rounded-full text-xs font-medium transition
+                      {{ app()->getLocale() === 'id' ? 'bg-indigo-500 text-white shadow-sm' : 'text-gray-400 hover:text-white' }}">
+                ID
+            </a>
+        </div>
 
         <!-- HIRE ME DESKTOP -->
         <a href="{{ route('home') }}#contact"
            class="hidden md:inline-flex items-center gap-1.5 bg-indigo-500 hover:bg-indigo-600
                   px-4 py-1.5 rounded-full text-sm font-medium
                   transition shadow-lg shadow-indigo-500/25 shrink-0">
-            Hire Me
+            {{ __('nav.hire_me') }}
             <span class="text-xs opacity-70">&rarr;</span>
         </a>
 
@@ -62,21 +76,35 @@
 
         <div class="flex flex-col gap-0.5 px-4 pb-4 pt-3">
 
-            <a href="{{ route('home') }}#about" class="nav-link w-full text-left">About</a>
-            <a href="{{ route('home') }}#skills" class="nav-link w-full text-left">Skills</a>
-            <a href="{{ route('home') }}#experience" class="nav-link w-full text-left">Experience</a>
+            <a href="{{ route('home') }}#about" class="nav-link w-full text-left">{{ __('nav.about') }}</a>
+            <a href="{{ route('home') }}#skills" class="nav-link w-full text-left">{{ __('nav.skills') }}</a>
+            <a href="{{ route('home') }}#experience" class="nav-link w-full text-left">{{ __('nav.experience') }}</a>
             <a href="{{ route('home') }}#projects"
                class="nav-link w-full text-left">
-                Projects
+                {{ __('nav.projects') }}
             </a>
-            <a href="{{ route('home') }}#contact" class="nav-link w-full text-left">Contact</a>
+            <a href="{{ route('home') }}#contact" class="nav-link w-full text-left">{{ __('nav.contact') }}</a>
 
             <hr class="border-white/5 my-2">
+
+            <!-- LANGUAGE SWITCHER MOBILE -->
+            <div class="flex items-center gap-2 justify-center">
+                <a href="{{ route('lang.switch', 'en') }}"
+                   class="flex-1 text-center px-3 py-2 rounded-full text-sm font-medium transition
+                          {{ app()->getLocale() === 'en' ? 'bg-indigo-500 text-white' : 'bg-white/5 text-gray-400 border border-white/10' }}">
+                    EN
+                </a>
+                <a href="{{ route('lang.switch', 'id') }}"
+                   class="flex-1 text-center px-3 py-2 rounded-full text-sm font-medium transition
+                          {{ app()->getLocale() === 'id' ? 'bg-indigo-500 text-white' : 'bg-white/5 text-gray-400 border border-white/10' }}">
+                    ID
+                </a>
+            </div>
 
             <a href="{{ route('home') }}#contact"
                class="flex items-center justify-center gap-2 bg-indigo-500 px-4 py-2.5 rounded-full text-sm font-medium
                       hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/25 mt-1">
-                Hire Me <span class="text-xs opacity-70">&rarr;</span>
+                {{ __('nav.hire_me') }} <span class="text-xs opacity-70">&rarr;</span>
             </a>
 
         </div>

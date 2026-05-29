@@ -13,13 +13,13 @@
         <div class="text-center mb-14 sm:mb-20">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs sm:text-sm tracking-widest mb-4 animate-fade-in-up">
                 <span class="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-ping"></span>
-                CONTACT
+                {{ __('contact.section_label') }}
             </div>
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white animate-fade-in-up">
-                Let's <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">Work Together</span>
+                {{ __('contact.heading_start') }} <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">{{ __('contact.heading_end') }}</span>
             </h2>
             <p class="text-gray-500 text-sm sm:text-base mt-3 max-w-xl mx-auto animate-fade-in-up">
-                Have a project in mind or just want to say hi? Fill out the form below and I'll get back to you.
+                {{ __('contact.subtitle') }}
             </p>
         </div>
 
@@ -52,7 +52,7 @@
                                 <i class="fa-solid fa-check text-sm"></i>
                             </div>
                             <div class="flex-1 min-w-0">
-                                <p class="text-emerald-300 text-sm font-medium">Message Sent!</p>
+                                <p class="text-emerald-300 text-sm font-medium">{{ __('contact.message_sent') }}</p>
                                 <p class="text-gray-400 text-xs mt-0.5">{{ session('success') }}</p>
                             </div>
                             <button type="button" onclick="dismissToast()" class="flex-shrink-0 text-gray-500 hover:text-white transition">
@@ -70,7 +70,7 @@
                                 <i class="fa-solid fa-exclamation text-sm"></i>
                             </div>
                             <div class="flex-1 min-w-0">
-                                <p class="text-red-300 text-sm font-medium">Form Error</p>
+                                <p class="text-red-300 text-sm font-medium">{{ __('contact.form_error') }}</p>
                                 <ul class="text-gray-400 text-xs mt-0.5 space-y-0.5">
                                     @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
@@ -100,7 +100,7 @@
                                            class="floating-label absolute left-4 top-4 text-gray-500 text-sm
                                                   transition-all duration-300 pointer-events-none
                                                   peer-focus:text-indigo-400">
-                                        <i class="fa-regular fa-user mr-1.5"></i>Your Name
+                                        <i class="fa-regular fa-user mr-1.5"></i>{{ __('contact.your_name') }}
                                     </label>
                                 </div>
 
@@ -116,7 +116,7 @@
                                            class="floating-label absolute left-4 top-4 text-gray-500 text-sm
                                                   transition-all duration-300 pointer-events-none
                                                   peer-focus:text-indigo-400">
-                                        <i class="fa-regular fa-envelope mr-1.5"></i>Your Email
+                                        <i class="fa-regular fa-envelope mr-1.5"></i>{{ __('contact.your_email') }}
                                     </label>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@
                                        class="floating-label absolute left-4 top-4 text-gray-500 text-sm
                                               transition-all duration-300 pointer-events-none
                                               peer-focus:text-indigo-400">
-                                    <i class="fa-regular fa-pen-to-square mr-1.5"></i>Subject (optional)
+                                    <i class="fa-regular fa-pen-to-square mr-1.5"></i>{{ __('contact.subject') }}
                                 </label>
                             </div>
 
@@ -151,7 +151,7 @@
                                        class="floating-label absolute left-4 top-4 text-gray-500 text-sm
                                               transition-all duration-300 pointer-events-none
                                               peer-focus:text-indigo-400">
-                                    <i class="fa-regular fa-comment-dots mr-1.5"></i>Your Message
+                                    <i class="fa-regular fa-comment-dots mr-1.5"></i>{{ __('contact.your_message') }}
                                 </label>
                             </div>
 
@@ -167,7 +167,7 @@
                                            flex items-center justify-center gap-2.5
                                            overflow-hidden">
                                 <span class="btn-text inline-flex items-center gap-2.5">
-                                    Send Message
+                                    {{ __('contact.send_message') }}
                                     <i class="fa-solid fa-paper-plane text-xs group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300"></i>
                                 </span>
                                 <span class="btn-spinner hidden">
@@ -205,7 +205,7 @@
                             <i class="fa-solid fa-envelope text-sm"></i>
                         </div>
                         <div class="min-w-0">
-                            <p class="text-gray-500 text-xs">Email</p>
+                            <p class="text-gray-500 text-xs">{{ __('contact.email_label') }}</p>
                             <a href="mailto:rizaldipt20@gmail.com"
                                class="text-white text-sm hover:text-indigo-400 transition truncate block">
                                 rizaldipt20@gmail.com
@@ -222,7 +222,7 @@
                             <i class="fa-solid fa-phone text-sm"></i>
                         </div>
                         <div class="min-w-0">
-                            <p class="text-gray-500 text-xs">Phone</p>
+                            <p class="text-gray-500 text-xs">{{ __('contact.phone_label') }}</p>
                             <a href="tel:+6283871268561"
                                class="text-white text-sm hover:text-indigo-400 transition truncate block">
                                 +62 838-7126-8561
@@ -239,7 +239,7 @@
                             <i class="fa-solid fa-location-dot text-sm"></i>
                         </div>
                         <div class="min-w-0">
-                            <p class="text-gray-500 text-xs">Location</p>
+                            <p class="text-gray-500 text-xs">{{ __('contact.location_label') }}</p>
                             <p class="text-white text-sm">Jakarta, Indonesia</p>
                         </div>
                     </div>
@@ -253,7 +253,7 @@
                             border border-white/[0.06]
                             shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
                     <div class="flex items-center justify-between gap-4">
-                        <p class="text-gray-400 text-xs sm:text-sm font-medium">Find me on</p>
+                        <p class="text-gray-400 text-xs sm:text-sm font-medium">{{ __('contact.find_me') }}</p>
                         <div class="flex gap-3">
                             <a href="https://github.com/Andkhrzald" target="_blank" rel="noopener noreferrer"
                                class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl

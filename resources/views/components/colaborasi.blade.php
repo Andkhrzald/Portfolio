@@ -13,13 +13,13 @@
         <div class="text-center mb-14 sm:mb-20">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs sm:text-sm tracking-widest mb-4 animate-fade-in-up">
                 <span class="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-ping"></span>
-                COLLABORATORS
+                {{ __('colaborasi.section_label') }}
             </div>
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white animate-fade-in-up">
-                People I<span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text"> Collaborate</span> With
+                {{ __('colaborasi.heading_start') }}<span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text"> {{ __('colaborasi.heading_end') }}</span> {{ __('colaborasi.heading_with') }}
             </h2>
             <p class="text-gray-500 text-sm sm:text-base mt-3 max-w-xl mx-auto animate-fade-in-up">
-                Amazing developers who've contributed to my projects and helped bring ideas to life.
+                {{ __('colaborasi.subtitle') }}
             </p>
         </div>
 
@@ -85,7 +85,7 @@
                         </p>
                         @else
                         <p class="text-gray-600 text-xs sm:text-sm italic mb-5 min-h-[3.5em]">
-                            No bio available
+                            {{ __('colaborasi.no_bio') }}
                         </p>
                         @endif
 
@@ -151,7 +151,7 @@
                       hover:text-white hover:border-transparent
                       hover:shadow-lg hover:shadow-indigo-500/25
                       transition-all duration-300">
-                <span>View Full Team</span>
+                <span>{{ __('colaborasi.view_full_team') }}</span>
                 <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-1 transition-transform duration-300"></i>
             </a>
         </div>
