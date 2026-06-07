@@ -1,4 +1,4 @@
-<section id="skills" class="py-12 sm:py-16 px-4 sm:px-6 bg-[#020617] relative overflow-hidden">
+<section id="skills" class="py-12 sm:py-16 px-4 sm:px-6 bg-surface relative overflow-hidden">
 
     <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/10 via-transparent to-transparent pointer-events-none"></div>
 
@@ -25,11 +25,11 @@
 
         <!-- FADE KIRI -->
         <div class="absolute left-0 top-0 h-full w-12 sm:w-20 
-                    bg-gradient-to-r from-[#020617] to-transparent z-10"></div>
+                    bg-gradient-to-r from-surface to-transparent z-10"></div>
 
         <!-- FADE KANAN -->
         <div class="absolute right-0 top-0 h-full w-12 sm:w-20 
-                    bg-gradient-to-l from-[#020617] to-transparent z-10"></div>
+                    bg-gradient-to-l from-surface to-transparent z-10"></div>
 
         <!-- MARQUEE CONTENT (CSS continuous scroll) -->
         <div id="marquee" class="flex gap-3 sm:gap-4 w-max animate-marquee">

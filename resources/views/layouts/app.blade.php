@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-[#0B0F1A] text-white font-[Inter]">
+<body class="bg-surface text-white font-[Inter]">
 
 @include('components.navbar')
 

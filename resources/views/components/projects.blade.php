@@ -1,4 +1,4 @@
-<section id="projects" class="relative py-14 sm:py-18 bg-[#0b1220] overflow-hidden">
+<section id="projects" class="relative py-14 sm:py-18 bg-surface overflow-hidden">
 
     {{-- Background subtle glow --}}
     <div class="absolute inset-0 -z-10">

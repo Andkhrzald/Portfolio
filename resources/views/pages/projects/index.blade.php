@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 bg-[#0B0F1A] min-h-screen overflow-hidden">
+<section class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 bg-surface min-h-screen overflow-hidden">
 
     {{-- Mesh background --}}
     <div class="mesh-bg">

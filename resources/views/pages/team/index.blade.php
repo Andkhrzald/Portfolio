@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="pt-28 pb-16 sm:pt-36 sm:pb-20 bg-[#0B0F1A] min-h-screen">
+<section class="pt-28 pb-16 sm:pt-36 sm:pb-20 bg-surface min-h-screen">
 
     {{-- BACKGROUND GLOW --}}
     <div class="fixed inset-0 -z-10 pointer-events-none">
@@ -47,7 +47,7 @@
                                     border-2 border-indigo-500/30
                                     shadow-lg shadow-indigo-500/20"
                              alt="{{ $member['name'] }}">
-                        <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-[#0B0F1A] rounded-full"></div>
+                        <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-surface rounded-full"></div>
                     </div>
 
                     {{-- NAME & ROLE --}}

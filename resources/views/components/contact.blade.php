@@ -1,8 +1,8 @@
-<section id="contact" class="relative py-16 sm:py-24 bg-[#070B1A] overflow-hidden">
+<section id="contact" class="relative py-16 sm:py-24 bg-surface overflow-hidden">
 
     <!-- BACKGROUND -->
     <div class="absolute inset-0 -z-10">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#070B1A] via-[#0A0F2A] to-[#12163C]"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface-light to-surface-light"></div>
 
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
             w-[600px] sm:w-[800px] h-[600px] sm:h-[800px] bg-indigo-600/20 blur-[120px] sm:blur-[160px] rounded-full">

@@ -1,4 +1,4 @@
-<footer class="bg-[#070B1A] border-t border-white/10">
+<footer class="bg-surface border-t border-white/10">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 sm:py-6 
         flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
@@ -23,14 +23,14 @@
                 <i class="fa-brands fa-github text-gray-300 text-xs sm:text-sm"></i>
             </a>
 
-            <a href="https://linkedin.com/in/andikarizaldi" target="_blank" 
+            <a href="https://www.linkedin.com/in/andikha-rizaldi-a85245411" target="_blank" 
                class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center 
                 rounded-lg bg-white/5 border border-white/10 
                 hover:bg-indigo-500 transition">
                 <i class="fa-brands fa-linkedin text-gray-300 text-xs sm:text-sm"></i>
             </a>
 
-            <a href="https://instagram.com/andikarizaldi" target="_blank" 
+            <a href="https://www.instagram.com/andkhrzal_/" target="_blank" 
                class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center 
                 rounded-lg bg-white/5 border border-white/10 
                 hover:bg-indigo-500 transition">

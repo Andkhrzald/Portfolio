@@ -1,8 +1,8 @@
-<section class="relative min-h-screen flex items-center overflow-hidden bg-[#070B1A]">
+<section class="relative min-h-screen flex items-center overflow-hidden bg-surface">
 
     <!-- BACKGROUND -->
     <div class="absolute inset-0 -z-10">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#070B1A] via-[#0A0F2A] to-[#12163C]"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface-light to-surface-light"></div>
 
         <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
             w-[800px] h-[800px] bg-indigo-600/20 blur-[160px] rounded-full"></div>
@@ -70,7 +70,7 @@
                             <i class="fa-brands fa-github relative text-gray-300 group-hover:text-white text-sm sm:text-base"></i>
                         </a>
 
-                        <a href="https://linkedin.com/in/andikarizaldi" target="_blank" class="group relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:scale-110 transition">
+                        <a href="https://www.linkedin.com/in/andikha-rizaldi-a85245411" target="_blank" class="group relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:scale-110 transition">
                             <div class="absolute inset-0 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10
                                 shadow-[0_10px_30px_rgba(0,0,0,0.4)] 
                                 group-hover:border-sky-400/60 
@@ -86,12 +86,12 @@
                             <i class="fa-brands fa-instagram relative text-gray-300 group-hover:text-white text-sm sm:text-base"></i>
                         </a>
 
-                        <a href="#" class="group relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center scale-105">
-                            <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 opacity-30 blur-md"></div>
-                            <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-indigo-500/40 to-purple-500/40
-                                backdrop-blur-xl border border-indigo-400/40
-                                shadow-[0_0_25px_rgba(139,92,246,0.6)]"></div>
-                            <i class="fa-solid fa-envelope relative text-white text-sm sm:text-base"></i>
+                        <a href="#" class="group relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:scale-110 transition">
+                            <div class="absolute inset-0 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10
+                                shadow-[0_10px_30px_rgba(0,0,0,0.4)]
+                                group-hover:border-indigo-400/60
+                                group-hover:shadow-[0_0_25px_rgba(99,102,241,0.6)]"></div>
+                            <i class="fa-solid fa-envelope relative text-gray-300 group-hover:text-white text-sm sm:text-base"></i>
                         </a>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                     <div class="relative rounded-full p-[3px] animate-gradient-move shadow-2xl shadow-indigo-500/30 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
 
                         <!-- IMAGE CONTAINER -->
-                        <div class="rounded-full overflow-hidden w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] bg-[#0B0F1A]">
+                        <div class="rounded-full overflow-hidden w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] bg-surface">
                             <img id="hero-img"
                                 src="{{ asset('images/profile/saya.png') }}" 
                                 alt="Andika Rizaldi"

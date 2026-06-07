@@ -1,4 +1,4 @@
-<section id="experience" class="relative py-14 sm:py-18 overflow-hidden bg-gradient-to-br from-[#020617] via-[#020617] to-[#0b1220]">
+<section id="experience" class="relative py-14 sm:py-18 overflow-hidden bg-surface">
 
     <!-- DECORATIVE BACKGROUND -->
     <div class="absolute inset-0 -z-10">
@@ -56,7 +56,7 @@
                     <div class="relative group pl-12 sm:pl-14 md:pl-0">
                         <!-- Timeline Dot -->
                         <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
-                            rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 border-[3px] border-[#020617]
+                            rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 border-[3px] border-surface
                             shadow-[0_0_12px_rgba(52,211,153,0.5)] group-hover:shadow-[0_0_20px_rgba(52,211,153,0.7)]
                             transition duration-300 z-10"></div>
                         <!-- Year Badge (Mobile) -->
@@ -93,7 +93,7 @@
                     <!-- PT GEMILANG ARKADE INDONESIA -->
                     <div class="relative group pl-12 sm:pl-14 md:pl-0">
                         <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
-                            rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 border-[3px] border-[#020617]
+                            rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 border-[3px] border-surface
                             shadow-[0_0_12px_rgba(99,102,241,0.5)] group-hover:shadow-[0_0_20px_rgba(99,102,241,0.7)]
                             transition duration-300 z-10"></div>
                         <div class="md:hidden flex items-center gap-2 mb-2">
@@ -133,7 +133,7 @@
                     <!-- WALIKOTA ADMINISTRASI JAKARTA PUSAT -->
                     <div class="relative group pl-12 sm:pl-14 md:pl-0">
                         <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
-                            rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-[3px] border-[#020617]
+                            rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-[3px] border-surface
                             shadow-[0_0_12px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
                             transition duration-300 z-10"></div>
                         <div class="md:hidden flex items-center gap-2 mb-2">
@@ -190,7 +190,7 @@
                     <!-- UNIVERSITAS BSI -->
                     <div class="relative group pl-12 sm:pl-14 md:pl-0">
                         <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
-                            rounded-full bg-gradient-to-br from-sky-400 to-sky-600 border-[3px] border-[#020617]
+                            rounded-full bg-gradient-to-br from-sky-400 to-sky-600 border-[3px] border-surface
                             shadow-[0_0_12px_rgba(14,165,233,0.5)] group-hover:shadow-[0_0_20px_rgba(14,165,233,0.7)]
                             transition duration-300 z-10"></div>
                         <div class="md:hidden flex items-center gap-2 mb-2">
@@ -224,7 +224,7 @@
                     <!-- SMK MUHAMMADIYAH 2 -->
                     <div class="relative group pl-12 sm:pl-14 md:pl-0">
                         <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
-                            rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-[3px] border-[#020617]
+                            rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-[3px] border-surface
                             shadow-[0_0_12px_rgba(20,184,166,0.5)] group-hover:shadow-[0_0_20px_rgba(20,184,166,0.7)]
                             transition duration-300 z-10"></div>
                         <div class="md:hidden flex items-center gap-2 mb-2">
@@ -352,7 +352,7 @@
             </div>
 
             <!-- BOTTOM GRADIENT FADE -->
-            <div class="absolute -bottom-10 left-0 right-0 h-20 bg-gradient-to-t from-[#020617] to-transparent z-30 pointer-events-none"></div>
+            <div class="absolute -bottom-10 left-0 right-0 h-20 bg-gradient-to-t from-surface to-transparent z-30 pointer-events-none"></div>
 
         </div>
 

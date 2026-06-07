@@ -1,4 +1,4 @@
-<section id="colaborasi" class="relative py-14 sm:py-18 bg-[#070B1A] overflow-hidden">
+<section id="colaborasi" class="relative py-14 sm:py-18 bg-surface overflow-hidden">
 
     {{-- BACKGROUND GLOW ORBS --}}
     <div class="absolute inset-0 -z-10">
@@ -35,7 +35,7 @@
 
                 {{-- CARD --}}
                 <div class="relative p-6 sm:p-8 rounded-2xl h-full
-                            bg-[#0B0F1A]/90 backdrop-blur-xl
+                            bg-surface/90 backdrop-blur-xl
                             border border-white/[0.06]
                             shadow-[0_10px_40px_rgba(0,0,0,0.5)]
                             group-hover:shadow-[0_20px_60px_rgba(99,102,241,0.15)]
@@ -57,7 +57,7 @@
                                             shadow-lg shadow-black/30
                                             transition-all duration-500"
                                      alt="{{ $member['name'] }}">
-                                <div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-emerald-500 border-[3px] border-[#0B0F1A] rounded-full">
+                                <div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-emerald-500 border-[3px] border-surface rounded-full">
                                     <div class="absolute inset-0 bg-emerald-400 rounded-full animate-ping opacity-50"></div>
                                 </div>
                             </div>

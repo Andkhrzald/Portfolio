@@ -7,7 +7,7 @@
     <div class="reading-progress-bar" id="reading-progress-bar"></div>
 </div>
 
-<section class="relative bg-[#0B0F1A] min-h-screen">
+<section class="relative bg-surface min-h-screen">
 
     {{-- HERO COVER --}}
     <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh] overflow-hidden bg-gradient-to-br from-indigo-900/40 via-purple-900/20 to-slate-900">
@@ -16,7 +16,7 @@
              class="w-full h-full object-cover opacity-60"
              alt="{{ $project['title'] }}">
 
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-[#0B0F1A]/60 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent"></div>
 
         <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 md:p-16 max-w-5xl mx-auto">
             <div class="flex flex-wrap items-center gap-3 mb-3 reveal visible">
@@ -50,7 +50,7 @@
         {{-- NAV BACK --}}
         <div class="mb-8 sm:mb-10 reveal">
             <a href="{{ route('projects.index') }}"
-               class="inline-flex items-center gap-2 text-gray-500 hover:text-white text-sm transition group bg-[#0B0F1A]/80 backdrop-blur-sm px-4 py-2 rounded-full border border-white/5">
+               class="inline-flex items-center gap-2 text-gray-500 hover:text-white text-sm transition group bg-surface/80 backdrop-blur-sm px-4 py-2 rounded-full border border-white/5">
                 <span class="group-hover:-translate-x-1 transition">&larr;</span>
                 {{ __('projects_show.back') }}
             </a>
