@@ -17,6 +17,8 @@
             ['name' => 'MySQL', 'img' => 'mysql.svg'],
             ['name' => 'Github', 'img' => 'github.svg'],
             ['name' => 'javascript', 'img' => 'javascript.svg'],
+            ['name' => 'Ms. Word', 'img' => '#' ], 
+            ['name' => 'Canva', 'img' => '#' ], 
         ];
     @endphp
 
@@ -64,11 +66,17 @@
                         hover:shadow-indigo-500/15 hover:shadow-md
                         transition duration-300 cursor-pointer">
 
+                @if($skill['img'] !== '#')
                 <img src="{{ asset('images/skills/' . $skill['img']) }}" 
                      class="w-6 h-6 sm:w-8 sm:h-8 object-contain
                             group-hover:scale-110 
                             group-hover:drop-shadow-[0_0_12px_rgba(99,102,241,0.8)]
                             transition duration-300">
+                @else
+                <div class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center text-gray-400 group-hover:text-indigo-300 transition duration-300">
+                    <i class="fa-solid fa-{{ $skill['name'] === 'Ms. Word' ? 'file-word' : 'paintbrush' }} text-lg"></i>
+                </div>
+                @endif
 
                 <p class="text-[11px] sm:text-xs text-gray-300 group-hover:text-white font-medium">
                     {{ $skill['name'] }}

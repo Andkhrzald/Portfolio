@@ -17,6 +17,9 @@
 @include('components.experience')
 
 <div class="h-px w-3/4 mx-auto bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent"></div>
+@include('components.certificates')
+
+<div class="h-px w-3/4 mx-auto bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent"></div>
 @include('components.colaborasi', ['members' => $members])
 
 <div class="h-px w-3/4 mx-auto bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent"></div>

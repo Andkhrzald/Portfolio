@@ -54,7 +54,7 @@
                     <!-- EXPERIENCE BADGE -->
                     <div class="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 z-20 animate-fade-up">
                         <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl sm:rounded-2xl px-3 sm:px-5 py-2 sm:py-3 shadow-xl shadow-indigo-500/40 flex items-center gap-2 sm:gap-3">
-                            <span class="text-xl sm:text-3xl font-bold text-white">1+</span>
+                            <span class="text-xl sm:text-3xl font-bold text-white">2+</span>
                             <div class="text-left">
                                 <p class="text-[10px] sm:text-xs text-indigo-200 leading-tight">{{ __('about.years_of') }}</p>
                                 <p class="text-[10px] sm:text-xs text-white font-semibold leading-tight">{{ __('about.experience') }}</p>
@@ -85,19 +85,19 @@
                 <!-- STATS CARDS -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
                     <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 sm:p-4 hover:bg-white/[0.06] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5 transition duration-300">
-                        <p class="text-xl sm:text-2xl font-bold text-white">3+</p>
+                        <p class="text-xl sm:text-2xl font-bold text-white">2+</p>
                         <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">{{ __('about.stat_years') }}</p>
                     </div>
                     <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 sm:p-4 hover:bg-white/[0.06] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5 transition duration-300">
-                        <p class="text-xl sm:text-2xl font-bold text-white">20+</p>
+                        <p class="text-xl sm:text-2xl font-bold text-white">10+</p>
                         <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">{{ __('about.stat_projects') }}</p>
                     </div>
                     <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 sm:p-4 hover:bg-white/[0.06] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5 transition duration-300">
-                        <p class="text-xl sm:text-2xl font-bold text-white">15+</p>
+                        <p class="text-xl sm:text-2xl font-bold text-white">5+</p>
                         <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">{{ __('about.stat_clients') }}</p>
                     </div>
                     <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-3 sm:p-4 hover:bg-white/[0.06] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5 transition duration-300">
-                        <p class="text-xl sm:text-2xl font-bold text-white">7+</p>
+                        <p class="text-xl sm:text-2xl font-bold text-white">5+</p>
                         <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5">{{ __('about.stat_tech') }}</p>
                     </div>
                 </div>
@@ -107,28 +107,32 @@
                     <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium
                         bg-indigo-500/10 text-indigo-300 border border-indigo-500/20
                         hover:bg-indigo-500/20 hover:border-indigo-500/40 hover:shadow-lg hover:shadow-indigo-500/10
+                        transition duration-300 cursor-default">Python</span>
+                    <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium
+                        bg-orange-500/10 text-orange-300 border border-orange-500/20
+                        hover:bg-orange-500/20 hover:border-orange-500/40 hover:shadow-lg hover:shadow-orange-500/10
                         transition duration-300 cursor-default">Laravel</span>
                     <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium
                         bg-sky-500/10 text-sky-300 border border-sky-500/20
                         hover:bg-sky-500/20 hover:border-sky-500/40 hover:shadow-lg hover:shadow-sky-500/10
                         transition duration-300 cursor-default">Flutter</span>
                     <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium
-                        bg-purple-500/10 text-purple-300 border border-purple-500/20
-                        hover:bg-purple-500/20 hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/10
-                        transition duration-300 cursor-default">Tailwind</span>
-                    <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium
                         bg-emerald-500/10 text-emerald-300 border border-emerald-500/20
                         hover:bg-emerald-500/20 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10
-                        transition duration-300 cursor-default">Vue.js</span>
+                        transition duration-300 cursor-default">Ms. Word</span>
                     <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium
-                        bg-orange-500/10 text-orange-300 border border-orange-500/20
-                        hover:bg-orange-500/20 hover:border-orange-500/40 hover:shadow-lg hover:shadow-orange-500/10
+                        bg-purple-500/10 text-purple-300 border border-purple-500/20
+                        hover:bg-purple-500/20 hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/10
+                        transition duration-300 cursor-default">Data Entry</span>
+                    <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium
+                        bg-rose-500/10 text-rose-300 border border-rose-500/20
+                        hover:bg-rose-500/20 hover:border-rose-500/40 hover:shadow-lg hover:shadow-rose-500/10
                         transition duration-300 cursor-default">MySQL</span>
                 </div>
 
                 <!-- CTA BUTTONS -->
                 <div class="flex gap-3 sm:gap-4 justify-center md:justify-start flex-wrap">
-                    <a href="{{ asset('cv/Andikha_Rizaldi_CV.pdf') }}" download
+                    <a href="{{ asset('cv/resume-ANDIKHA RIZALDI.pdf') }}" download
                        class="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-medium
                               bg-gradient-to-r from-indigo-500 to-purple-500 
                               hover:opacity-90 hover:shadow-lg hover:shadow-indigo-500/30

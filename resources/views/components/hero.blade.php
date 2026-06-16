@@ -86,7 +86,7 @@
                             <i class="fa-brands fa-instagram relative text-gray-300 group-hover:text-white text-sm sm:text-base"></i>
                         </a>
 
-                        <a href="#" class="group relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:scale-110 transition">
+                        <a href="mailto:rizaldipt20@gmail.com" class="group relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:scale-110 transition">
                             <div class="absolute inset-0 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10
                                 shadow-[0_10px_30px_rgba(0,0,0,0.4)]
                                 group-hover:border-indigo-400/60

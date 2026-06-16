@@ -38,7 +38,7 @@
             [
                 'title' => 'ELVOAPP V2',
                 'slug' => 'elvoapp-v2',
-                'desc' => 'Task management application built with Laravel and Tailwind CSS.',
+                'desc' => 'E-Commerce admin dashboard with inventory management and real-time order tracking.',
                 'img' => 'ElvoDashboard.png',
                 'tech' => ['Laravel', 'Tailwind', 'MySQL']
             ],
@@ -52,9 +52,9 @@
             [
                 'title' => 'ELVOAPP',
                 'slug' => 'elvoapp',
-                'desc' => 'Cross-platform mobile application built with Flutter and Dart.',
+                'desc' => 'E-Commerce mobile app built with Flutter featuring UI/UX design in Figma.',
                 'img' => 'project3.png',
-                'tech' => ['Flutter', 'Dart', 'API']
+                'tech' => ['Flutter', 'Dart', 'Figma']
             ],
         ];
         @endphp

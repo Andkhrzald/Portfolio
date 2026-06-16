@@ -61,7 +61,7 @@
                             transition duration-300 z-10"></div>
                         <!-- Year Badge (Mobile) -->
                         <div class="md:hidden flex items-center gap-2 mb-2">
-                            <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">Feb 2026 - Present</span>
+                            <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">Feb 2026 - Apr 2026</span>
                             <span class="text-[10px] text-gray-500">{{ __('experience.internship') }}</span>
                         </div>
                         <!-- Card -->
@@ -74,7 +74,7 @@
                                     <h4 class="text-base sm:text-lg font-semibold text-white">Astra Credit Companies</h4>
                                     <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.astra.role') }}</p>
                                 </div>
-                                <span class="hidden md:inline-flex text-[11px] font-medium text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 whitespace-nowrap">Feb 2026 - Present</span>
+                                <span class="hidden md:inline-flex text-[11px] font-medium text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 whitespace-nowrap">Feb - Apr 2026</span>
                             </div>
                             <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.astra.address') }}</p>
                             <ul class="space-y-1.5 mt-3">
@@ -85,6 +85,10 @@
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/60 mt-1.5 shrink-0"></span>
                                     {{ __('experience.astra.task2') }}
+                                </li>
+                                <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/60 mt-1.5 shrink-0"></span>
+                                    {{ __('experience.astra.task3') }}
                                 </li>
                             </ul>
                         </div>
@@ -125,6 +129,14 @@
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/60 mt-1.5 shrink-0"></span>
                                     {{ __('experience.gemilang.task3') }}
+                                </li>
+                                <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/60 mt-1.5 shrink-0"></span>
+                                    {{ __('experience.gemilang.task4') }}
+                                </li>
+                                <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/60 mt-1.5 shrink-0"></span>
+                                    {{ __('experience.gemilang.task5') }}
                                 </li>
                             </ul>
                         </div>
@@ -194,7 +206,7 @@
                             shadow-[0_0_12px_rgba(14,165,233,0.5)] group-hover:shadow-[0_0_20px_rgba(14,165,233,0.7)]
                             transition duration-300 z-10"></div>
                         <div class="md:hidden flex items-center gap-2 mb-2">
-                            <span class="text-[11px] font-semibold text-sky-400 bg-sky-500/10 px-2.5 py-0.5 rounded-full border border-sky-500/20">2024 - 2028 (Expected)</span>
+                            <span class="text-[11px] font-semibold text-sky-400 bg-sky-500/10 px-2.5 py-0.5 rounded-full border border-sky-500/20">Sep 2024 - Sep 2028 (Expected)</span>
                         </div>
                         <div class="md:w-[calc(50%-40px)] md:mr-[calc(50%+40px)] 
                             bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
@@ -205,7 +217,7 @@
                                     <h4 class="text-base sm:text-lg font-semibold text-white">Universitas Bina Sarana Informatika</h4>
                                     <p class="text-sky-300 text-xs sm:text-sm font-medium">{{ __('experience.univ.major') }}</p>
                                 </div>
-                                <span class="hidden md:inline-flex text-[11px] font-medium text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-full border border-sky-500/20 whitespace-nowrap">2024 - 2028</span>
+                                <span class="hidden md:inline-flex text-[11px] font-medium text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-full border border-sky-500/20 whitespace-nowrap">Sep 2024 - Sep 2028</span>
                             </div>
                             <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.univ.address') }}</p>
                             <ul class="space-y-1.5 mt-3">
