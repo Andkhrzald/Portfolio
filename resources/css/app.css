@@ -5,6 +5,35 @@
     --color-surface-light: #161822;
 }
 
+@media (width >= 48rem) {
+    .md\:block { display: block; }
+    .md\:hidden { display: none; }
+    .md\:flex { display: flex; }
+    .md\:inline-flex { display: inline-flex; }
+    .md\:items-center { align-items: center; }
+    .md\:pl-0 { padding-left: 0; }
+    .md\:pr-0 { padding-right: 0; }
+    .md\:py-8 { padding-block: 2rem; }
+    .md\:min-h-\[40vh\] { min-height: 40vh; }
+    .md\:min-h-screen { min-height: 100vh; }
+    .md\:w-\[calc\(50\%-40px\)\] { width: calc(50% - 40px); }
+    .md\:ml-\[calc\(50\%\+40px\)\] { margin-left: calc(50% + 40px); }
+    .md\:mr-\[calc\(50\%\+40px\)\] { margin-right: calc(50% + 40px); }
+    .md\:left-1\/2 { left: 50%; }
+    .md\:-translate-x-1\/2 { --tw-translate-x: -50%; transform: translate(var(--tw-translate-x), var(--tw-translate-y)); }
+    .md\:-translate-x-px { --tw-translate-x: -1px; transform: translate(var(--tw-translate-x), var(--tw-translate-y)); }
+    .md\:translate-x-0 { --tw-translate-x: 0; transform: translate(var(--tw-translate-x), var(--tw-translate-y)); }
+    .md\:text-left { text-align: left; }
+    .md\:text-right { text-align: right; }
+}
+@media (width >= 40rem) {
+    .sm\:pl-14 { padding-left: 3.5rem; }
+    .sm\:py-18 { padding-block: 4.5rem; }
+    .sm\:mb-20 { margin-bottom: 5rem; }
+    .sm\:w-\[22px\] { width: 22px; }
+    .sm\:h-\[22px\] { height: 22px; }
+}
+
 /* Optional custom */
 .glow-line {
     background: linear-gradient(to right, transparent, #6366f1, transparent);
@@ -415,6 +444,45 @@ main {
 }
 
 /* ========================= */
+/* EXPERIENCE SECTION BACKGROUNDS */
+/* ========================= */
+
+.experience-entry {
+    position: relative;
+}
+
+.experience-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.experience-bg-right {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.6s ease;
+}
+
+.experience-bg-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.6s ease;
+}
+
+.experience-bg.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.parallax-layer {
+    will-change: transform;
+    pointer-events: none;
+}
+
+/* ========================= */
 /* SECTION SCROLL REVEAL */
 /* ========================= */
 
@@ -424,15 +492,31 @@ main {
     transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.reveal.visible {
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0) translateY(0);
 }
 
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
 
 /* ========================= */
 /* SUBTLE MESH BACKGROUND */
@@ -577,4 +661,96 @@ main {
 .floating-group textarea:not(:placeholder-shown) ~ .floating-label {
     transform: translateY(-1.65rem) scale(0.82);
     color: #818cf8;
+}
+
+/* ========================= */
+/* CERTIFICATE LIGHTBOX      */
+/* ========================= */
+
+#certLightbox {
+    transition: opacity 0.3s ease;
+}
+
+#certLightbox:not(.hidden) {
+    animation: lightboxIn 0.3s ease forwards;
+}
+
+#certLightbox.hidden {
+    animation: lightboxOut 0.25s ease forwards;
+}
+
+@keyframes lightboxIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes lightboxOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+#lightboxImage {
+    transition: opacity 0.25s ease, transform 0.3s ease;
+}
+
+#lightboxImage.loading {
+    opacity: 0;
+    transform: scale(0.97);
+}
+
+.watermark-overlay::after {
+    content: '© Andika Rizaldi';
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    transform: rotate(-15deg);
+    opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+    .watermark-overlay::after {
+        font-size: 10px;
+        bottom: 12px;
+        right: 12px;
+        opacity: 0.4;
+    }
+}
+
+#lightboxInfo {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+#lightboxInfo::-webkit-scrollbar {
+    width: 4px;
+}
+
+#lightboxInfo::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#lightboxInfo::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.1);
+    border-radius: 99px;
+}
+
+.page-dot {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cert-card:focus-visible {
+    outline: 2px solid rgba(99, 102, 241, 0.5);
+    outline-offset: 2px;
+}
+
+.cert-card img {
+    -webkit-user-drag: none;
+    user-select: none;
 }

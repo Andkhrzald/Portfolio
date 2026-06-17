@@ -37,7 +37,25 @@ Route::get('/', function () {
         ];
     }
 
-    return view('welcome', compact('members'));
+    $certKeys = [
+        ['id' => 'pkl',          'lang_key' => 'certificates.pkl',       'pages' => 1, 'badge' => 'completed'],
+        ['id' => 'bnsp',         'lang_key' => 'certificates.bnsp',      'pages' => 2, 'badge' => 'active'],
+        ['id' => 'hakcipta',     'lang_key' => 'certificates.copyright', 'pages' => 1, 'badge' => 'active',
+         'team' => ['Rehanfzn', 'FuncSmile', 'NoyanPolicarpus']],
+    ];
+
+    $certificates = [];
+    foreach ($certKeys as $cert) {
+        $lk = $cert['lang_key'];
+        $cert['title']  = __("{$lk}.title");
+        $cert['issuer'] = __("{$lk}.issuer");
+        $cert['period'] = __("{$lk}.period");
+        $cert['desc']   = __("{$lk}.desc");
+
+        $certificates[] = $cert;
+    }
+
+    return view('welcome', compact('members', 'certificates'));
 })->name('home');
 
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');

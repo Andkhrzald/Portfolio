@@ -148,5 +148,16 @@
     "certificates.copyright.type": "Computer Program Copyright",
     "certificates.copyright.issuer": "Directorate General of Intellectual Property",
     "certificates.copyright.period": "June 2026 - Present",
-    "certificates.copyright.desc": "Copyright for a web-based object detection system using YOLOV5 algorithm to detect student uniform discipline."
+    "certificates.copyright.desc": "Copyright for a web-based object detection system using YOLOV5 algorithm to detect student uniform discipline.",
+    "certificates.pkl.title": "Internship Certificate",
+    "certificates.pkl.issuer": "SMK Muhammadiyah 2 Jakarta",
+    "certificates.pkl.period": "Completed",
+    "certificates.pkl.desc": "Certificate of completion for internship program at PT Astra Daihatsu Motor, demonstrating professional administrative and operational competencies.",
+    "certificates.lightbox.close": "Close",
+    "certificates.lightbox.page": "Page",
+    "certificates.lightbox.of": "of",
+    "certificates.lightbox.prev": "Previous",
+    "certificates.lightbox.next": "Next",
+    "certificates.lightbox.view": "View Certificate",
+    "certificates.lightbox.team": "Team"
 }

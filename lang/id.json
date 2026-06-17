@@ -148,5 +148,16 @@
     "certificates.copyright.type": "Program Komputer",
     "certificates.copyright.issuer": "Direktorat Jenderal Kekayaan Intelektual",
     "certificates.copyright.period": "Juni 2026 - Sekarang",
-    "certificates.copyright.desc": "Hak cipta untuk sistem deteksi objek berbasis web menggunakan algoritma YOLOV5 untuk mendeteksi kedisiplinan seragam siswa."
+    "certificates.copyright.desc": "Hak cipta untuk sistem deteksi objek berbasis web menggunakan algoritma YOLOV5 untuk mendeteksi kedisiplinan seragam siswa.",
+    "certificates.pkl.title": "Sertifikat Praktik Kerja Lapangan",
+    "certificates.pkl.issuer": "SMK Muhammadiyah 2 Jakarta",
+    "certificates.pkl.period": "Terselesaikan",
+    "certificates.pkl.desc": "Sertifikat penyelesaian program magang di PT Astra Daihatsu Motor, menunjukkan kompetensi administratif dan operasional profesional.",
+    "certificates.lightbox.close": "Tutup",
+    "certificates.lightbox.page": "Halaman",
+    "certificates.lightbox.of": "dari",
+    "certificates.lightbox.prev": "Sebelumnya",
+    "certificates.lightbox.next": "Selanjutnya",
+    "certificates.lightbox.view": "Lihat Sertifikat",
+    "certificates.lightbox.team": "Tim"
 }

@@ -1,6 +1,5 @@
-<section id="experience" class="relative py-14 sm:py-18 overflow-hidden bg-surface">
+<section id="experience" class="relative py-14 sm:py-18 bg-surface">
 
-    <!-- DECORATIVE BACKGROUND -->
     <div class="absolute inset-0 -z-10">
         <div class="absolute top-40 left-0 w-[600px] h-[600px] bg-indigo-500/8 blur-[160px] rounded-full"></div>
         <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/8 blur-[120px] rounded-full"></div>
@@ -8,8 +7,7 @@
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
 
-        <!-- ===== SECTION HEADER ===== -->
-        <div class="text-center mb-16 sm:mb-20">
+        <div class="text-center mb-16 sm:mb-20 reveal">
             <div class="flex items-center justify-center gap-4 mb-4">
                 <span class="w-10 h-[2px] bg-gradient-to-r from-transparent via-indigo-400 to-transparent"></span>
                 <p class="text-indigo-400 text-xs sm:text-sm tracking-[0.25em] font-medium">{{ __('experience.section_label') }}</p>
@@ -24,10 +22,8 @@
             </p>
         </div>
 
-        <!-- ===== TIMELINE ===== -->
         <div class="relative">
 
-            <!-- VERTICAL LINE (DESKTOP & MOBILE) -->
             <div class="absolute left-[18px] sm:left-[22px] md:left-1/2 md:-translate-x-px top-0 bottom-0 w-[2px] z-10">
                 <div class="absolute inset-0 bg-gradient-to-b from-indigo-500/40 via-purple-500/30 to-indigo-500/20"></div>
                 <div class="absolute top-0 left-0 w-full h-[60%] 
@@ -35,13 +31,26 @@
                     blur-[3px] animate-lineGlowY"></div>
             </div>
 
-            <!-- ================================================================== -->
-            <!-- WORK EXPERIENCE SECTION                                           -->
-            <!-- ================================================================== -->
-            <div class="relative z-20 mb-16 sm:mb-20">
+            @php
+                $companyLogos = [
+                    'astra-credit-companies' => 'AC',
+                    'gemilang-arkade' => 'GA',
+                    'walikota-jakpus' => 'WJ',
+                    'universitas-bsi' => 'UB',
+                    'smk-muhammadiyah-2' => 'SM',
+                ];
 
-                <!-- Section Label -->
-                <div class="flex items-center gap-3 mb-8 md:mb-12 md:pl-0">
+                function logoPlaceholder($slug, $initials, $gradient) {
+                    $path = public_path("images/companies/{$slug}.png");
+                    if (file_exists($path)) {
+                        return '<img src="' . asset("images/companies/{$slug}.png") . '" alt="logo" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover ring-2 ring-white/10 shrink-0" draggable="false">';
+                    }
+                    return '<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl ' . $gradient . ' flex items-center justify-center text-white font-bold text-sm sm:text-base shadow-lg shrink-0 ring-2 ring-white/10">' . $initials . '</div>';
+                }
+            @endphp
+
+            <div class="relative z-20 mb-16 sm:mb-20">
+                <div class="flex items-center gap-3 mb-8 md:mb-12 md:pl-0 reveal">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/30">
                         <i class="fa-solid fa-briefcase text-white text-sm"></i>
                     </div>
@@ -49,35 +58,39 @@
                     <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent ml-3"></div>
                 </div>
 
-                <!-- Experience Items -->
-                <div class="space-y-8 sm:space-y-10">
-
-                    <!-- ASTRA CREDIT COMPANIES -->
-                    <div class="relative group pl-12 sm:pl-14 md:pl-0">
-                        <!-- Timeline Dot -->
-                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
-                            rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 border-[3px] border-surface
-                            shadow-[0_0_12px_rgba(52,211,153,0.5)] group-hover:shadow-[0_0_20px_rgba(52,211,153,0.7)]
-                            transition duration-300 z-10"></div>
-                        <!-- Year Badge (Mobile) -->
-                        <div class="md:hidden flex items-center gap-2 mb-2">
-                            <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">Feb 2026 - Apr 2026</span>
-                            <span class="text-[10px] text-gray-500">{{ __('experience.internship') }}</span>
-                        </div>
-                        <!-- Card -->
-                        <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] 
-                            bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
-                            hover:bg-white/[0.05] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
+                {{-- ASTRA --}}
+                <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center">
+                    <div class="experience-bg experience-bg-right absolute inset-0 overflow-hidden hidden md:block" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
+                        <div class="absolute inset-0 bg-gradient-to-r from-surface/60 via-surface/5 to-surface/60 z-10"></div>
+                        <img src="{{ asset('images/backgrounds/ASTRA.png') }}" alt="" class="w-full h-full object-cover object-left opacity-40" draggable="false" aria-hidden="true">
+                    </div>
+                    <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
+                        rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 border-[3px] border-surface
+                        shadow-[0_0_12px_rgba(52,211,153,0.5)] group-hover:shadow-[0_0_20px_rgba(52,211,153,0.7)]
+                        transition duration-300 z-10"></div>
+                    <div class="md:hidden flex items-center gap-2 mb-2">
+                        <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">Feb 2026 - Apr 2026</span>
+                        <span class="text-[10px] text-gray-500">{{ __('experience.internship') }}</span>
+                    </div>
+                    <div class="relative z-10 w-full">
+                        <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] reveal-right
+                            bg-white/[0.005] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                            hover:bg-white/[0.02] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                             transition duration-300">
-                            <div class="flex items-start justify-between mb-3">
-                                <div>
-                                    <h4 class="text-base sm:text-lg font-semibold text-white">Astra Credit Companies</h4>
-                                    <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.astra.role') }}</p>
+                            <div class="flex items-start gap-4 mb-4">
+                                {!! logoPlaceholder('astra-credit-companies', 'AC', 'bg-gradient-to-br from-emerald-500 to-emerald-700') !!}
+                                <div class="min-w-0 flex-1">
+                                    <div class="flex items-start justify-between gap-3 flex-wrap">
+                                        <div>
+                                            <h4 class="text-base sm:text-lg font-semibold text-white">Astra Credit Companies</h4>
+                                            <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.astra.role') }}</p>
+                                        </div>
+                                        <span class="hidden md:inline-flex text-[11px] font-medium text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 whitespace-nowrap">Feb - Apr 2026</span>
+                                    </div>
                                 </div>
-                                <span class="hidden md:inline-flex text-[11px] font-medium text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 whitespace-nowrap">Feb - Apr 2026</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.astra.address') }}</p>
-                            <ul class="space-y-1.5 mt-3">
+                            <p class="text-gray-400 text-xs sm:text-sm mb-3">{{ __('experience.astra.address') }}</p>
+                            <ul class="space-y-1.5">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/60 mt-1.5 shrink-0"></span>
                                     {{ __('experience.astra.task1') }}
@@ -93,31 +106,41 @@
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- PT GEMILANG ARKADE INDONESIA -->
-                    <div class="relative group pl-12 sm:pl-14 md:pl-0">
-                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
-                            rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 border-[3px] border-surface
-                            shadow-[0_0_12px_rgba(99,102,241,0.5)] group-hover:shadow-[0_0_20px_rgba(99,102,241,0.7)]
-                            transition duration-300 z-10"></div>
-                        <div class="md:hidden flex items-center gap-2 mb-2">
-                            <span class="text-[11px] font-semibold text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/20">May 2024 - Sep 2024</span>
-                            <span class="text-[10px] text-gray-500">{{ __('experience.contract') }}</span>
-                        </div>
-                        <!-- Card (alternating: left on desktop) -->
-                        <div class="md:w-[calc(50%-40px)] md:mr-[calc(50%+40px)] 
-                            bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
-                            hover:bg-white/[0.05] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
+                {{-- GEMILANG --}}
+                <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center">
+                    <div class="experience-bg experience-bg-left absolute inset-0 overflow-hidden hidden md:block" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
+                        <div class="absolute inset-0 bg-gradient-to-l from-surface/60 via-surface/5 to-surface/60 z-10"></div>
+                        <img src="{{ asset('images/backgrounds/GEMILANG.png') }}" alt="" class="w-full h-full object-cover object-right opacity-40" draggable="false" aria-hidden="true">
+                    </div>
+                    <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
+                        rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 border-[3px] border-surface
+                        shadow-[0_0_12px_rgba(99,102,241,0.5)] group-hover:shadow-[0_0_20px_rgba(99,102,241,0.7)]
+                        transition duration-300 z-10"></div>
+                    <div class="md:hidden flex items-center gap-2 mb-2">
+                        <span class="text-[11px] font-semibold text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/20">May 2024 - Sep 2024</span>
+                        <span class="text-[10px] text-gray-500">{{ __('experience.contract') }}</span>
+                    </div>
+                    <div class="relative z-10 w-full">
+                        <div class="md:w-[calc(50%-40px)] md:mr-[calc(50%+40px)] reveal-left
+                            bg-white/[0.005] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                            hover:bg-white/[0.02] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                             transition duration-300">
-                            <div class="flex items-start justify-between mb-3">
-                                <div>
-                                    <h4 class="text-base sm:text-lg font-semibold text-white">PT Gemilang Arkade Indonesia</h4>
-                                    <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.gemilang.role') }}</p>
+                            <div class="flex items-start gap-4 mb-4">
+                                {!! logoPlaceholder('gemilang-arkade', 'GA', 'bg-gradient-to-br from-indigo-500 to-indigo-700') !!}
+                                <div class="min-w-0 flex-1">
+                                    <div class="flex items-start justify-between gap-3 flex-wrap">
+                                        <div>
+                                            <h4 class="text-base sm:text-lg font-semibold text-white">PT Gemilang Arkade Indonesia</h4>
+                                            <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.gemilang.role') }}</p>
+                                        </div>
+                                        <span class="hidden md:inline-flex text-[11px] font-medium text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-full border border-indigo-500/20 whitespace-nowrap">May - Sep 2024</span>
+                                    </div>
                                 </div>
-                                <span class="hidden md:inline-flex text-[11px] font-medium text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-full border border-indigo-500/20 whitespace-nowrap">May - Sep 2024</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.gemilang.address') }}</p>
-                            <ul class="space-y-1.5 mt-3">
+                            <p class="text-gray-400 text-xs sm:text-sm mb-3">{{ __('experience.gemilang.address') }}</p>
+                            <ul class="space-y-1.5">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/60 mt-1.5 shrink-0"></span>
                                     {{ __('experience.gemilang.task1') }}
@@ -141,30 +164,41 @@
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <!-- WALIKOTA ADMINISTRASI JAKARTA PUSAT -->
-                    <div class="relative group pl-12 sm:pl-14 md:pl-0">
-                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
-                            rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-[3px] border-surface
-                            shadow-[0_0_12px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
-                            transition duration-300 z-10"></div>
-                        <div class="md:hidden flex items-center gap-2 mb-2">
-                            <span class="text-[11px] font-semibold text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/20">Jan 2023 - Mar 2023</span>
-                            <span class="text-[10px] text-gray-500">{{ __('experience.internship') }}</span>
-                        </div>
-                        <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] 
-                            bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
-                            hover:bg-white/[0.05] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
+                {{-- WALIKOTA --}}
+                <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center">
+                    <div class="experience-bg experience-bg-right absolute inset-0 overflow-hidden hidden md:block" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
+                        <div class="absolute inset-0 bg-gradient-to-r from-surface/60 via-surface/5 to-surface/60 z-10"></div>
+                        <img src="{{ asset('images/backgrounds/WALIKOTA.png') }}" alt="" class="w-full h-full object-cover object-left opacity-40" draggable="false" aria-hidden="true">
+                    </div>
+                    <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
+                        rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-[3px] border-surface
+                        shadow-[0_0_12px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
+                        transition duration-300 z-10"></div>
+                    <div class="md:hidden flex items-center gap-2 mb-2">
+                        <span class="text-[11px] font-semibold text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/20">Jan 2023 - Mar 2023</span>
+                        <span class="text-[10px] text-gray-500">{{ __('experience.internship') }}</span>
+                    </div>
+                    <div class="relative z-10 w-full">
+                        <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] reveal-right
+                            bg-white/[0.005] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                            hover:bg-white/[0.02] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                             transition duration-300">
-                            <div class="flex items-start justify-between mb-3">
-                                <div>
-                                    <h4 class="text-base sm:text-lg font-semibold text-white">Walikota Administrasi Jakarta Pusat</h4>
-                                    <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.walikota.role') }}</p>
+                            <div class="flex items-start gap-4 mb-4">
+                                {!! logoPlaceholder('walikota-jakpus', 'WJ', 'bg-gradient-to-br from-purple-500 to-purple-700') !!}
+                                <div class="min-w-0 flex-1">
+                                    <div class="flex items-start justify-between gap-3 flex-wrap">
+                                        <div>
+                                            <h4 class="text-base sm:text-lg font-semibold text-white">Walikota Administrasi Jakarta Pusat</h4>
+                                            <p class="text-indigo-300 text-xs sm:text-sm font-medium">{{ __('experience.walikota.role') }}</p>
+                                        </div>
+                                        <span class="hidden md:inline-flex text-[11px] font-medium text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-full border border-purple-500/20 whitespace-nowrap">Jan - Mar 2023</span>
+                                    </div>
                                 </div>
-                                <span class="hidden md:inline-flex text-[11px] font-medium text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-full border border-purple-500/20 whitespace-nowrap">Jan - Mar 2023</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.walikota.address') }}</p>
-                            <ul class="space-y-1.5 mt-3">
+                            <p class="text-gray-400 text-xs sm:text-sm mb-3">{{ __('experience.walikota.address') }}</p>
+                            <ul class="space-y-1.5">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-purple-400/60 mt-1.5 shrink-0"></span>
                                     {{ __('experience.walikota.task1') }}
@@ -180,15 +214,11 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
+
             </div>
 
-            <!-- ================================================================== -->
-            <!-- EDUCATION SECTION                                                -->
-            <!-- ================================================================== -->
-            <div class="relative z-20 mb-16 sm:mb-20">
-
+            <div class="relative z-20 mb-16 sm:mb-20 reveal reveal-delay-2">
                 <div class="flex items-center gap-3 mb-8 md:mb-12">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center shadow-lg shadow-sky-500/30">
                         <i class="fa-solid fa-graduation-cap text-white text-sm"></i>
@@ -199,9 +229,9 @@
 
                 <div class="space-y-8 sm:space-y-10">
 
-                    <!-- UNIVERSITAS BSI -->
-                    <div class="relative group pl-12 sm:pl-14 md:pl-0">
-                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
+                    {{-- UNIVERSITAS BSI --}}
+                    <div class="relative group pl-12 sm:pl-14 md:pl-0 reveal-left reveal-delay-1">
+                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-6 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
                             rounded-full bg-gradient-to-br from-sky-400 to-sky-600 border-[3px] border-surface
                             shadow-[0_0_12px_rgba(14,165,233,0.5)] group-hover:shadow-[0_0_20px_rgba(14,165,233,0.7)]
                             transition duration-300 z-10"></div>
@@ -212,15 +242,20 @@
                             bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
                             hover:bg-white/[0.05] hover:border-sky-500/20 hover:shadow-lg hover:shadow-sky-500/5
                             transition duration-300">
-                            <div class="flex items-start justify-between mb-3">
-                                <div>
-                                    <h4 class="text-base sm:text-lg font-semibold text-white">Universitas Bina Sarana Informatika</h4>
-                                    <p class="text-sky-300 text-xs sm:text-sm font-medium">{{ __('experience.univ.major') }}</p>
+                            <div class="flex items-start gap-4 mb-4">
+                                {!! logoPlaceholder('universitas-bsi', 'UB', 'bg-gradient-to-br from-sky-500 to-sky-700') !!}
+                                <div class="min-w-0 flex-1">
+                                    <div class="flex items-start justify-between gap-3 flex-wrap">
+                                        <div>
+                                            <h4 class="text-base sm:text-lg font-semibold text-white">Universitas Bina Sarana Informatika</h4>
+                                            <p class="text-sky-300 text-xs sm:text-sm font-medium">{{ __('experience.univ.major') }}</p>
+                                        </div>
+                                        <span class="hidden md:inline-flex text-[11px] font-medium text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-full border border-sky-500/20 whitespace-nowrap">Sep 2024 - Sep 2028</span>
+                                    </div>
                                 </div>
-                                <span class="hidden md:inline-flex text-[11px] font-medium text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-full border border-sky-500/20 whitespace-nowrap">Sep 2024 - Sep 2028</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.univ.address') }}</p>
-                            <ul class="space-y-1.5 mt-3">
+                            <p class="text-gray-400 text-xs sm:text-sm mb-3">{{ __('experience.univ.address') }}</p>
+                            <ul class="space-y-1.5">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-sky-400/60 mt-1.5 shrink-0"></span>
                                     {{ __('experience.univ.task1') }}
@@ -233,9 +268,9 @@
                         </div>
                     </div>
 
-                    <!-- SMK MUHAMMADIYAH 2 -->
-                    <div class="relative group pl-12 sm:pl-14 md:pl-0">
-                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
+                    {{-- SMK --}}
+                    <div class="relative group pl-12 sm:pl-14 md:pl-0 reveal-right reveal-delay-2">
+                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-6 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
                             rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-[3px] border-surface
                             shadow-[0_0_12px_rgba(20,184,166,0.5)] group-hover:shadow-[0_0_20px_rgba(20,184,166,0.7)]
                             transition duration-300 z-10"></div>
@@ -246,15 +281,20 @@
                             bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
                             hover:bg-white/[0.05] hover:border-teal-500/20 hover:shadow-lg hover:shadow-teal-500/5
                             transition duration-300">
-                            <div class="flex items-start justify-between mb-3">
-                                <div>
-                                    <h4 class="text-base sm:text-lg font-semibold text-white">SMK Muhammadiyah 2 Jakarta</h4>
-                                    <p class="text-teal-300 text-xs sm:text-sm font-medium">{{ __('experience.smk.major') }}</p>
+                            <div class="flex items-start gap-4 mb-4">
+                                {!! logoPlaceholder('smk-muhammadiyah-2', 'SM', 'bg-gradient-to-br from-teal-500 to-teal-700') !!}
+                                <div class="min-w-0 flex-1">
+                                    <div class="flex items-start justify-between gap-3 flex-wrap">
+                                        <div>
+                                            <h4 class="text-base sm:text-lg font-semibold text-white">SMK Muhammadiyah 2 Jakarta</h4>
+                                            <p class="text-teal-300 text-xs sm:text-sm font-medium">{{ __('experience.smk.major') }}</p>
+                                        </div>
+                                        <span class="hidden md:inline-flex text-[11px] font-medium text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/20 whitespace-nowrap">2020 - 2023</span>
+                                    </div>
                                 </div>
-                                <span class="hidden md:inline-flex text-[11px] font-medium text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/20 whitespace-nowrap">2020 - 2023</span>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm mb-1">{{ __('experience.smk.address') }}</p>
-                            <ul class="space-y-1.5 mt-3">
+                            <p class="text-gray-400 text-xs sm:text-sm mb-3">{{ __('experience.smk.address') }}</p>
+                            <ul class="space-y-1.5">
                                 <li class="flex items-start gap-2 text-gray-400 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-teal-400/60 mt-1.5 shrink-0"></span>
                                     {{ __('experience.smk.task1') }}
@@ -270,11 +310,7 @@
                 </div>
             </div>
 
-            <!-- ================================================================== -->
-            <!-- PROJECTS SECTION                                                  -->
-            <!-- ================================================================== -->
-            <div class="relative z-20">
-
+            <div class="relative z-20 reveal reveal-delay-3">
                 <div class="flex items-center gap-3 mb-8 md:mb-12">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-500/30">
                         <i class="fa-solid fa-code text-white text-sm"></i>
@@ -284,9 +320,7 @@
                 </div>
 
                 <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
-
-                    <!-- ELVOAPP -->
-                    <div class="group bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                    <div class="reveal reveal-delay-1 group bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
                         hover:bg-white/[0.05] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                         transition duration-300">
                         <div class="flex items-center gap-3 mb-3">
@@ -322,8 +356,7 @@
                         </ul>
                     </div>
 
-                    <!-- ELVOAPP_V2 -->
-                    <div class="group bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                    <div class="reveal reveal-delay-2 group bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
                         hover:bg-white/[0.05] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                         transition duration-300">
                         <div class="flex items-center gap-3 mb-3">
@@ -359,11 +392,9 @@
                                 </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
 
-            <!-- BOTTOM GRADIENT FADE -->
             <div class="absolute -bottom-10 left-0 right-0 h-20 bg-gradient-to-t from-surface to-transparent z-30 pointer-events-none"></div>
 
         </div>
