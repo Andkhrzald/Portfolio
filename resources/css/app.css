@@ -25,6 +25,7 @@
     .md\:translate-x-0 { --tw-translate-x: 0; transform: translate(var(--tw-translate-x), var(--tw-translate-y)); }
     .md\:text-left { text-align: left; }
     .md\:text-right { text-align: right; }
+    .md\:bg-surface { background-color: var(--color-surface); }
 }
 @media (width >= 40rem) {
     .sm\:pl-14 { padding-left: 3.5rem; }

@@ -60,7 +60,7 @@
 
                 {{-- ASTRA --}}
                 <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center">
-                    <div class="experience-bg experience-bg-right absolute inset-0 overflow-hidden hidden md:block" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
+                    <div class="experience-bg experience-bg-right absolute inset-0 overflow-hidden" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
                         <div class="absolute inset-0 bg-gradient-to-r from-surface/60 via-surface/5 to-surface/60 z-10"></div>
                         <img src="{{ asset('images/backgrounds/ASTRA.png') }}" alt="" class="w-full h-full object-cover object-left opacity-40" draggable="false" aria-hidden="true">
                     </div>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="relative z-10 w-full">
                         <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] reveal-right
-                            bg-white/[0.005] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                            bg-white/[0.005] backdrop-blur-sm md:bg-surface border border-white/[0.06] rounded-2xl p-5 sm:p-6
                             hover:bg-white/[0.02] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                             transition duration-300">
                             <div class="flex items-start gap-4 mb-4">
@@ -110,7 +110,7 @@
 
                 {{-- GEMILANG --}}
                 <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center">
-                    <div class="experience-bg experience-bg-left absolute inset-0 overflow-hidden hidden md:block" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
+                    <div class="experience-bg experience-bg-left absolute inset-0 overflow-hidden" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
                         <div class="absolute inset-0 bg-gradient-to-l from-surface/60 via-surface/5 to-surface/60 z-10"></div>
                         <img src="{{ asset('images/backgrounds/GEMILANG.png') }}" alt="" class="w-full h-full object-cover object-right opacity-40" draggable="false" aria-hidden="true">
                     </div>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="relative z-10 w-full">
                         <div class="md:w-[calc(50%-40px)] md:mr-[calc(50%+40px)] reveal-left
-                            bg-white/[0.005] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                            bg-white/[0.005] backdrop-blur-sm md:bg-surface border border-white/[0.06] rounded-2xl p-5 sm:p-6
                             hover:bg-white/[0.02] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                             transition duration-300">
                             <div class="flex items-start gap-4 mb-4">
@@ -168,7 +168,7 @@
 
                 {{-- WALIKOTA --}}
                 <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center">
-                    <div class="experience-bg experience-bg-right absolute inset-0 overflow-hidden hidden md:block" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
+                    <div class="experience-bg experience-bg-right absolute inset-0 overflow-hidden" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
                         <div class="absolute inset-0 bg-gradient-to-r from-surface/60 via-surface/5 to-surface/60 z-10"></div>
                         <img src="{{ asset('images/backgrounds/WALIKOTA.png') }}" alt="" class="w-full h-full object-cover object-left opacity-40" draggable="false" aria-hidden="true">
                     </div>
@@ -182,7 +182,7 @@
                     </div>
                     <div class="relative z-10 w-full">
                         <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] reveal-right
-                            bg-white/[0.005] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                            bg-white/[0.005] backdrop-blur-sm md:bg-surface border border-white/[0.06] rounded-2xl p-5 sm:p-6
                             hover:bg-white/[0.02] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                             transition duration-300">
                             <div class="flex items-start gap-4 mb-4">
@@ -230,18 +230,23 @@
                 <div class="space-y-8 sm:space-y-10">
 
                     {{-- UNIVERSITAS BSI --}}
-                    <div class="relative group pl-12 sm:pl-14 md:pl-0 reveal-left reveal-delay-1">
-                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-6 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
+                    <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center reveal-left reveal-delay-1">
+                        <div class="experience-bg experience-bg-left absolute inset-0 overflow-hidden" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
+                            <div class="absolute inset-0 bg-gradient-to-l from-surface/60 via-surface/5 to-surface/60 z-10"></div>
+                            <img src="{{ asset('images/backgrounds/UBSI.png') }}" alt="" class="w-full h-full object-cover object-right opacity-40" draggable="false" aria-hidden="true">
+                        </div>
+                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
                             rounded-full bg-gradient-to-br from-sky-400 to-sky-600 border-[3px] border-surface
                             shadow-[0_0_12px_rgba(14,165,233,0.5)] group-hover:shadow-[0_0_20px_rgba(14,165,233,0.7)]
                             transition duration-300 z-10"></div>
                         <div class="md:hidden flex items-center gap-2 mb-2">
                             <span class="text-[11px] font-semibold text-sky-400 bg-sky-500/10 px-2.5 py-0.5 rounded-full border border-sky-500/20">Sep 2024 - Sep 2028 (Expected)</span>
                         </div>
-                        <div class="md:w-[calc(50%-40px)] md:mr-[calc(50%+40px)] 
-                            bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
-                            hover:bg-white/[0.05] hover:border-sky-500/20 hover:shadow-lg hover:shadow-sky-500/5
-                            transition duration-300">
+                        <div class="relative z-10 w-full">
+                            <div class="md:w-[calc(50%-40px)] md:mr-[calc(50%+40px)]
+                                bg-white/[0.03] backdrop-blur-xl md:bg-surface border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                                hover:bg-white/[0.05] hover:border-sky-500/20 hover:shadow-lg hover:shadow-sky-500/5
+                                transition duration-300">
                             <div class="flex items-start gap-4 mb-4">
                                 {!! logoPlaceholder('universitas-bsi', 'UB', 'bg-gradient-to-br from-sky-500 to-sky-700') !!}
                                 <div class="min-w-0 flex-1">
@@ -265,22 +270,28 @@
                                     {{ __('experience.univ.task2') }}
                                 </li>
                             </ul>
+                            </div>
                         </div>
                     </div>
 
                     {{-- SMK --}}
-                    <div class="relative group pl-12 sm:pl-14 md:pl-0 reveal-right reveal-delay-2">
-                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-6 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
+                    <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center reveal-right reveal-delay-2">
+                        <div class="experience-bg experience-bg-right absolute inset-0 overflow-hidden" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
+                            <div class="absolute inset-0 bg-gradient-to-r from-surface/60 via-surface/5 to-surface/60 z-10"></div>
+                            <img src="{{ asset('images/backgrounds/SMK.png') }}" alt="" class="w-full h-full object-cover object-left opacity-40" draggable="false" aria-hidden="true">
+                        </div>
+                        <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
                             rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-[3px] border-surface
                             shadow-[0_0_12px_rgba(20,184,166,0.5)] group-hover:shadow-[0_0_20px_rgba(20,184,166,0.7)]
                             transition duration-300 z-10"></div>
                         <div class="md:hidden flex items-center gap-2 mb-2">
                             <span class="text-[11px] font-semibold text-teal-400 bg-teal-500/10 px-2.5 py-0.5 rounded-full border border-teal-500/20">2020 - 2023</span>
                         </div>
-                        <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] 
-                            bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-5 sm:p-6
-                            hover:bg-white/[0.05] hover:border-teal-500/20 hover:shadow-lg hover:shadow-teal-500/5
-                            transition duration-300">
+                        <div class="relative z-10 w-full">
+                            <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)]
+                                bg-white/[0.03] backdrop-blur-xl md:bg-surface border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                                hover:bg-white/[0.05] hover:border-teal-500/20 hover:shadow-lg hover:shadow-teal-500/5
+                                transition duration-300">
                             <div class="flex items-start gap-4 mb-4">
                                 {!! logoPlaceholder('smk-muhammadiyah-2', 'SM', 'bg-gradient-to-br from-teal-500 to-teal-700') !!}
                                 <div class="min-w-0 flex-1">
@@ -304,6 +315,7 @@
                                     {{ __('experience.smk.task2') }}
                                 </li>
                             </ul>
+                            </div>
                         </div>
                     </div>
 
