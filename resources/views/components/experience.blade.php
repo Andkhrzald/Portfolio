@@ -62,7 +62,7 @@
                 <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center">
                     <div class="experience-bg experience-bg-right absolute inset-0 overflow-hidden" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
                         <div class="absolute inset-0 bg-gradient-to-r from-surface/60 via-surface/5 to-surface/60 z-10"></div>
-                        <img src="{{ asset('images/backgrounds/ASTRA.png') }}" alt="" class="w-full h-full object-cover object-left opacity-40" draggable="false" aria-hidden="true">
+                        <img src="{{ asset('images/backgrounds/acc.png') }}" alt="" class="w-full h-full object-cover object-left opacity-40" draggable="false" aria-hidden="true">
                     </div>
                     <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
                         rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 border-[3px] border-surface
@@ -74,7 +74,7 @@
                     </div>
                     <div class="relative z-10 w-full">
                         <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] reveal-right
-                            bg-white/[0.005] backdrop-blur-sm md:bg-surface border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                            bg-white/[0.005] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-5 sm:p-6
                             hover:bg-white/[0.02] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                             transition duration-300">
                             <div class="flex items-start gap-4 mb-4">
@@ -112,7 +112,7 @@
                 <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center">
                     <div class="experience-bg experience-bg-left absolute inset-0 overflow-hidden" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
                         <div class="absolute inset-0 bg-gradient-to-l from-surface/60 via-surface/5 to-surface/60 z-10"></div>
-                        <img src="{{ asset('images/backgrounds/GEMILANG.png') }}" alt="" class="w-full h-full object-cover object-right opacity-40" draggable="false" aria-hidden="true">
+                        <img src="{{ asset('images/backgrounds/ga-removebg-preview.png') }}" alt="" class="w-full h-full object-cover object-right opacity-40" draggable="false" aria-hidden="true">
                     </div>
                     <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
                         rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 border-[3px] border-surface
@@ -124,7 +124,7 @@
                     </div>
                     <div class="relative z-10 w-full">
                         <div class="md:w-[calc(50%-40px)] md:mr-[calc(50%+40px)] reveal-left
-                            bg-white/[0.005] backdrop-blur-sm md:bg-surface border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                            bg-white/[0.005] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-5 sm:p-6
                             hover:bg-white/[0.02] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                             transition duration-300">
                             <div class="flex items-start gap-4 mb-4">
@@ -168,10 +168,6 @@
 
                 {{-- WALIKOTA --}}
                 <div class="experience-entry relative group pl-12 sm:pl-14 md:pl-0 py-8 md:py-8 md:min-h-[40vh] md:flex md:items-center">
-                    <div class="experience-bg experience-bg-right absolute inset-0 overflow-hidden" style="left: 50%; width: 100vw; margin-left: -50vw; right: auto; z-index: 1;">
-                        <div class="absolute inset-0 bg-gradient-to-r from-surface/60 via-surface/5 to-surface/60 z-10"></div>
-                        <img src="{{ asset('images/backgrounds/WALIKOTA.png') }}" alt="" class="w-full h-full object-cover object-left opacity-40" draggable="false" aria-hidden="true">
-                    </div>
                     <div class="absolute left-[10px] sm:left-[14px] md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] 
                         rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-[3px] border-surface
                         shadow-[0_0_12px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.7)]
@@ -182,7 +178,7 @@
                     </div>
                     <div class="relative z-10 w-full">
                         <div class="md:w-[calc(50%-40px)] md:ml-[calc(50%+40px)] reveal-right
-                            bg-white/[0.005] backdrop-blur-sm md:bg-surface border border-white/[0.06] rounded-2xl p-5 sm:p-6
+                            bg-white/[0.005] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-5 sm:p-6
                             hover:bg-white/[0.02] hover:border-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/5
                             transition duration-300">
                             <div class="flex items-start gap-4 mb-4">
